@@ -1,0 +1,19 @@
+<view
+	class="c-item"
+	bind:tap="click"
+>
+	<view class="icon">
+		<li-icon
+			name="{{ icon }}"
+			size="60rpx"
+		/>
+	</view>
+	<view class="item-name">
+		<text class="name">{{ name }}</text>
+		<text>{{ label }}</text>
+	</view>
+	<li-icon
+		name="chevron-right"
+		color="#ccc"
+	/>
+</view>

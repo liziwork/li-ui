@@ -1,0 +1,25 @@
+<view class="container">
+	<view class="data">
+		<logo></logo>
+		<view class="title">
+			<text class="txt">Welcome to</text>
+			<text class="name">LI UI</text>
+		</view>
+		<button
+			class="share"
+			open-type="share"
+		>分享好友</button>
+		<image
+			class="team-bg"
+			src="../../assets/images/team.svg"
+		/>
+	</view>
+	<view class="items">
+		<list
+			wx:for="{{ items }}"
+			wx:key="item"
+			title="{{ item.title }}"
+			items="{{ item.children }}"
+		/>
+	</view>
+</view>

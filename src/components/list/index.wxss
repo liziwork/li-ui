@@ -1,0 +1,1 @@
+.c-list{width:100%;padding-bottom:40rpx}.c-list .title{width:100%;display:flex;justify-content:space-between;align-items:center;font-size:34rpx;color:#111;padding:20rpx 0}.c-list .title .count{font-size:24rpx;color:#999}

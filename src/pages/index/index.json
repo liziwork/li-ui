@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "logo": "../../components/logo/index",
+    "list": "../../components/list/index"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white"
+}

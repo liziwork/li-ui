@@ -1,0 +1,14 @@
+<view class="c-list">
+	<view class="title">
+		<text>{{ title }}</text>
+		<text class="count">{{ items.length }} items</text>
+	</view>
+	<item
+		wx:for="{{ items }}"
+		wx:key="item"
+		icon="{{ item.icon }}"
+		name="{{ item.name }}"
+		label="{{ item.label }}"
+		path="{{ item.path }}"
+	/>
+</view>
