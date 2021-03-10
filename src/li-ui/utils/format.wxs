@@ -1,0 +1,9 @@
+var fixUnit = function (value, unit = 'px') {
+  // 判断value是否为字符串
+  if (typeof value === 'number') return value
+  return Number(value.replace(unit, ''))
+}
+
+module.exports = {
+  fixUnit: fixUnit,
+}

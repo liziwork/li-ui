@@ -1,0 +1,11 @@
+<view class="container">
+	<li-waterfall
+		generic:selectable="card"
+		views="{{ views }}"
+		skeleton
+		length="8"
+		loadedClass="loaded-view"
+		bind:observe="observe"
+	>
+	</li-waterfall>
+</view>

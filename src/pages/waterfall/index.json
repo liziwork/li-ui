@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "li-waterfall": "../../li-ui/waterfall/index",
+    "card": "../../components/card/index"
+  },
+  "navigationBarTitleText": "瀑布流"
+}

@@ -1,0 +1,8 @@
+<template name="placeholder">
+	<view
+		wx:for="{{ views.length }}"
+		wx:key="item"
+		class="placeholder"
+		id="placeholder-{{ index }}"
+	/>
+</template>

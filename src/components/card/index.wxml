@@ -1,0 +1,26 @@
+<view class="c-card">
+	<view class="loaded-view">
+		<image
+			class="image"
+			src="{{ value.item.image }}"
+			bind:load="load"
+		>
+		</image>
+	</view>
+	<view class="title">{{ value.item.title }}</view>
+	<view class="author">
+		<view class="avatar">
+			<image
+				class="image"
+				src="https://hbimg.huabanimg.com/{{ value.item.author.avatar }}_sq75sf/format/webp"
+			>
+			</image>
+		</view>
+		<view class="info">
+			<view class="nickname">
+				<text class="name">{{ value.item.author.username }}</text>采集到
+			</view>
+			<view class="category">{{ value.item.board }}</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,14 @@
+"use strict";
+Component({
+    properties: {
+        value: Object,
+    },
+    methods: {
+        load({ detail }) {
+            const { index, pIndex } = this.data.value;
+            this.triggerEvent('loaded', Object.assign({}, detail, { index,
+                pIndex }));
+        },
+    },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsU0FBUyxDQUFDO0lBQ1IsVUFBVSxFQUFFO1FBQ1YsS0FBSyxFQUFFLE1BQU07S0FDZDtJQUNELE9BQU8sRUFBRTtRQUNQLElBQUksQ0FBQyxFQUFFLE1BQU0sRUFBRTtZQUNiLE1BQU0sRUFBRSxLQUFLLEVBQUUsTUFBTSxFQUFFLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUE7WUFDekMsSUFBSSxDQUFDLFlBQVksQ0FBQyxRQUFRLG9CQUNyQixNQUFNLElBQ1QsS0FBSztnQkFDTCxNQUFNLElBQ04sQ0FBQTtRQUNKLENBQUM7S0FDRjtDQUNGLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbIkNvbXBvbmVudCh7XG4gIHByb3BlcnRpZXM6IHtcbiAgICB2YWx1ZTogT2JqZWN0LFxuICB9LFxuICBtZXRob2RzOiB7XG4gICAgbG9hZCh7IGRldGFpbCB9KSB7XG4gICAgICBjb25zdCB7IGluZGV4LCBwSW5kZXggfSA9IHRoaXMuZGF0YS52YWx1ZVxuICAgICAgdGhpcy50cmlnZ2VyRXZlbnQoJ2xvYWRlZCcsIHtcbiAgICAgICAgLi4uZGV0YWlsLFxuICAgICAgICBpbmRleCxcbiAgICAgICAgcEluZGV4LFxuICAgICAgfSlcbiAgICB9LFxuICB9LFxufSlcbiJdfQ==

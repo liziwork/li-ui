@@ -1,0 +1,174 @@
+var format = require('../utils/format.wxs')
+
+function render(newValue, oldValue, ownerInstance, instance) {
+  if (newValue === 0 || newValue === oldValue) return
+
+  var OPTIONS = instance.getDataset().options
+
+  var pIndex = newValue - 1
+
+  var views = ownerInstance.selectAllComponents('.waterfall-item-' + pIndex)
+
+  var STATE = ownerInstance.getState()
+  STATE.options = OPTIONS
+
+  if (!STATE.views) STATE.views = []
+  STATE.views[pIndex] = {
+    height: [],
+    style: [],
+    timeOut: getDate().getTime() + OPTIONS.timeOut,
+  }
+
+  if (!STATE.heights) STATE.heights = [[0, 0]]
+
+  var LH = STATE.heights[pIndex][0]
+  var RH = STATE.heights[pIndex][1]
+
+  views.forEach(function (v) {
+    var STYLE = v.getComputedStyle(['height'])
+    var HEIGHT = STYLE.height
+    var height = format.fixUnit(HEIGHT, 'px')
+    if (LH <= RH) {
+      v.setStyle({
+        left: 0,
+        top: LH + 'px',
+      })
+      LH += height + OPTIONS.span[0]
+    } else if (LH > RH) {
+      v.setStyle({
+        right: 0,
+        top: RH + 'px',
+      })
+      RH += height + OPTIONS.span[0]
+    }
+  })
+  STATE.heights[pIndex + 1] = [LH, RH]
+
+  instance.setStyle({
+    height: Math.max(LH, RH) + 'px',
+  })
+
+  setPlaceholder(ownerInstance, pIndex, LH, RH, STATE.heights[pIndex])
+
+  // 是否开启长列表
+  if (!OPTIONS.recycle) return
+  ownerInstance.callMethod('generateObserves', {
+    index: pIndex,
+  })
+}
+
+function renderView(newValue, oldValue, ownerInstance) {
+  var STATE = ownerInstance.getState()
+
+  var pIndex = newValue.pIndex
+  var views = ownerInstance.selectAllComponents('.waterfall-item-' + pIndex)
+
+  var LH = STATE.heights[pIndex][0]
+  var RH = STATE.heights[pIndex][1]
+
+  views.forEach(function (v, k) {
+    var LOADED = v.selectComponent('.' + STATE.options.loadedClass)
+    var image_height = STATE.views[pIndex].height[k]
+    if (!image_height) {
+      image_height = format.fixUnit(LOADED.getComputedStyle(['height']).height)
+    }
+    LOADED.setStyle({ height: image_height + 'px' })
+
+    var STYLE = v.getComputedStyle(['height'])
+    var HEIGHT = STYLE.height
+    var height = format.fixUnit(HEIGHT, 'px')
+
+    var LOADEDSTYLE = LOADED.getComputedStyle(['height'])
+    var loaded_height = format.fixUnit(LOADEDSTYLE.height, 'px')
+    var view_height = image_height - loaded_height + height
+
+    var style = {}
+
+    if (LH <= RH) {
+      style = {
+        left: 0,
+        top: LH + 'px',
+        right: 'auto',
+      }
+      v.setStyle(style)
+      LH += view_height + STATE.options.span[0]
+    } else if (LH > RH) {
+      style = {
+        right: 0,
+        top: RH + 'px',
+        left: 'auto',
+      }
+      v.setStyle(style)
+      RH += view_height + STATE.options.span[0]
+    }
+    STATE.views[pIndex].style[k] = style
+  })
+  STATE.heights[pIndex + 1] = [LH, RH]
+
+  var container = ownerInstance.selectComponent('.li-waterfall-container')
+  container.setStyle({
+    height: Math.max(LH, RH) + 'px',
+  })
+
+  setPlaceholder(ownerInstance, pIndex, LH, RH, STATE.heights[pIndex])
+}
+
+var timer = null
+function loaded(newValue, oldValue, ownerInstance, instance) {
+  var loaded = newValue.item.loaded
+  if (!loaded) return
+
+  var STATE = ownerInstance.getState()
+
+  var pIndex = newValue.pIndex
+  var index = newValue.index
+
+  var STYLE = instance.getComputedStyle(['width'])
+  var height = computedHeight(
+    format.fixUnit(STYLE.width, 'px'),
+    loaded.width,
+    loaded.height
+  )
+
+  STATE.views[pIndex].height[index] = height
+
+  var viewStyle = STATE.views[pIndex].style
+  if (viewStyle[index]) {
+    var LOADED = instance.selectComponent('.' + STATE.options.loadedClass)
+    LOADED.setStyle({ height: height + 'px' })
+    instance.setStyle({
+      left: viewStyle[index].left,
+      top: viewStyle[index].top,
+      right: viewStyle[index].right,
+    })
+    return
+  }
+
+  // 超时不改变样式
+  var timeOut = STATE.views[pIndex].timeOut
+  if (timeOut < getDate().getTime()) return
+
+  ownerInstance.clearTimeout(timer)
+  timer = ownerInstance.setTimeout(function () {
+    renderView(newValue, oldValue, ownerInstance)
+  }, 300)
+}
+
+function computedHeight(viewWidth, width, height) {
+  return (viewWidth / width) * height
+}
+
+function setPlaceholder(dom, index, LH, RH, heights) {
+  var placeholder = dom.selectComponent('#placeholder-' + index)
+  var height = Math.max(LH, RH)
+  var top = Math.min(heights[0], heights[1])
+  placeholder.setStyle({
+    height: height - top + 'px',
+    top: top + 'px',
+  })
+}
+
+module.exports = {
+  render: render,
+  loaded: loaded,
+}
