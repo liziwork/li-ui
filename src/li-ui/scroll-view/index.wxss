@@ -1,0 +1,1 @@
+.li-scroll-view{width:100%;height:100%}.li-scroll-view .refresh-view{width:100%;height:100px;position:absolute;top:-100px}.li-scroll-view .content{width:100%;height:100%}

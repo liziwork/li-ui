@@ -1,0 +1,44 @@
+function _getWizard(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .wizard')
+}
+
+function _getObjects(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .objects')
+}
+
+function _getMagician(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .li-magician')
+}
+
+function _getData(event, name) {
+  return event.currentTarget.dataset[name]
+}
+
+function onPulling(event, ownerInstance) {
+  var threshold = _getData(event, 'threshold')
+  if (!threshold) threshold = 100
+
+  var y = event.detail.dy
+  if (y <= threshold) {
+    _getWizard(ownerInstance).setStyle({
+      top: 200 - y * 2 + 'px',
+    })
+    _getObjects(ownerInstance).setStyle({
+      top: y * 2 - 200 + 'px',
+    })
+  }
+}
+function onRefresh(event, ownerInstance) {
+  _getMagician(ownerInstance).addClass('moving')
+  ownerInstance.triggerEvent('refresh')
+}
+function onRestore(event, ownerInstance) {
+  _getMagician(ownerInstance).removeClass('moving')
+  ownerInstance.triggerEvent('restore')
+}
+
+module.exports = {
+  onPulling: onPulling,
+  onRefresh: onRefresh,
+  onRestore: onRestore,
+}

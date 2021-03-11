@@ -19,7 +19,7 @@ Page({
             icon: 'refresh',
             name: '下拉刷新',
             label: 'PullDownRefresh',
-            path: '../waterfall/index',
+            path: '../pull-down-refresh/index',
           },
         ],
       },

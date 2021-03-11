@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "li-icon": "../../li-ui/icon/index"
+  },
+  "componentGenerics": {
+    "selectable": true
+  }
+}

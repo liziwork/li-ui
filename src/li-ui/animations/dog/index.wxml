@@ -1,0 +1,36 @@
+<view class="li-dog {{ moving ? 'moving' : '' }}">
+	<view class="dog">
+		<view class="dog-body">
+			<view class="dog-tail">
+				<view class="dog-tail">
+					<view class="dog-tail">
+						<view class="dog-tail">
+							<view class="dog-tail">
+								<view class="dog-tail">
+									<view class="dog-tail">
+										<view class="dog-tail"></view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="dog-torso"></view>
+		<view class="dog-head">
+			<view class="dog-ears">
+				<view class="dog-ear"></view>
+				<view class="dog-ear"></view>
+			</view>
+			<view class="dog-eyes">
+				<view class="dog-eye"></view>
+				<view class="dog-eye"></view>
+			</view>
+			<view class="dog-muzzle">
+				<view class="dog-tongue"></view>
+			</view>
+		</view>
+	</view>
+	<view class="ball"></view>
+</view>

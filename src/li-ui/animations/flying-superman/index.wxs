@@ -1,0 +1,50 @@
+function _getBgLines(ownerInstance) {
+  return ownerInstance.selectAllComponents(
+    '.refresh-view >>> .longfazers >>> .line'
+  )
+}
+
+function _getMan(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .man')
+}
+
+function _getRefresh(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .li-flying-superman')
+}
+
+function _getData(event, name) {
+  return event.currentTarget.dataset[name]
+}
+
+function onPulling(event, ownerInstance) {
+  var threshold = _getData(event, 'threshold')
+  if (!threshold) threshold = 100
+
+  var y = event.detail.dy
+  if (y <= threshold) {
+    _getBgLines(ownerInstance).map(function (v, k) {
+      v.setStyle({
+        left: y * (k + 1) + 'px',
+      })
+    })
+
+    if (y >= threshold / 2) return
+    _getMan(ownerInstance).setStyle({
+      top: y + '%',
+    })
+  }
+}
+function onRefresh(event, ownerInstance) {
+  _getRefresh(ownerInstance).addClass('moving')
+  ownerInstance.triggerEvent('refresh')
+}
+function onRestore(event, ownerInstance) {
+  _getRefresh(ownerInstance).removeClass('moving')
+  ownerInstance.triggerEvent('restore')
+}
+
+module.exports = {
+  onPulling: onPulling,
+  onRefresh: onRefresh,
+  onRestore: onRestore,
+}

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "refresh-item": "../../components/refresh-item/index",
+    "li-icon": "../../li-ui/icon/index",
+    "flying-superman": "../../li-ui/animations/flying-superman/index",
+    "magician": "../../li-ui/animations/magician/index",
+    "dog": "../../li-ui/animations/dog/index",
+    "hot-balloon": "../../li-ui/animations/hot-balloon/index"
+  },
+  "navigationBarTitleText": "下拉刷新"
+}

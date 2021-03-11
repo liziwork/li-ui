@@ -1,0 +1,19 @@
+<view
+	class="c-refresh-item"
+	bind:tap="click"
+>
+	<view class="title">
+		<text>{{ title }}</text>
+		<li-icon
+			name="chevron-right"
+			size="26rpx"
+			color="#aaa"
+		/>
+	</view>
+	<view
+		class="item"
+		style="background: {{ bgColor }}; height: {{ height }}"
+	>
+		<selectable moving />
+	</view>
+</view>

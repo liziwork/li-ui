@@ -1,0 +1,45 @@
+function _getBall(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .ball-box')
+}
+
+function _getCloud(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .cloud-box')
+}
+
+function _getHotBalloon(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .li-hot-balloon')
+}
+
+function _getData(event, name) {
+  return event.currentTarget.dataset[name]
+}
+
+function onPulling(event, ownerInstance) {
+  var threshold = _getData(event, 'threshold')
+  if (!threshold) threshold = 100
+
+  var y = event.detail.dy
+  if (y <= threshold) {
+    _getBall(ownerInstance).setStyle({
+      top: 200 - y * 2 + 'px',
+    })
+
+    _getCloud(ownerInstance).setStyle({
+      top: y - 100 + 'px',
+    })
+  }
+}
+function onRefresh(event, ownerInstance) {
+  _getHotBalloon(ownerInstance).addClass('moving')
+  ownerInstance.triggerEvent('refresh')
+}
+function onRestore(event, ownerInstance) {
+  _getHotBalloon(ownerInstance).removeClass('moving')
+  ownerInstance.triggerEvent('restore')
+}
+
+module.exports = {
+  onPulling: onPulling,
+  onRefresh: onRefresh,
+  onRestore: onRestore,
+}

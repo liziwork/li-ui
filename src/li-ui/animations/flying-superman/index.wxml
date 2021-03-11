@@ -1,0 +1,25 @@
+<view
+	class="li-flying-superman {{ moving ? 'moving' : '' }}"
+	style="background: {{ bgColor }}"
+>
+	<view class="longfazers">
+		<view
+			wx:for="{{ 4 }}"
+			wx:key="item"
+			class="line"
+		/>
+	</view>
+	<view class="man">
+		<view class="backpack">
+			<view
+				wx:for="{{ 4 }}"
+				wx:key="item"
+				class="line"
+			/>
+		</view>
+		<view class="base">
+			<view class="body"></view>
+			<view class="face"></view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,47 @@
+function _getDog(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .dog')
+}
+
+function _getBall(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .ball')
+}
+
+function _getLiDog(ownerInstance) {
+  return ownerInstance.selectComponent('.refresh-view >>> .li-dog')
+}
+
+function _getData(event, name) {
+  return event.currentTarget.dataset[name]
+}
+
+function onPulling(event, ownerInstance) {
+  var threshold = _getData(event, 'threshold')
+  if (!threshold) threshold = 100
+
+  var y = event.detail.dy
+  if (y <= threshold) {
+    if (y >= 50) return
+
+    _getBall(ownerInstance).setStyle({
+      top: 50 - y + 'px',
+    })
+
+    _getDog(ownerInstance).setStyle({
+      top: y - 50 + 'px',
+    })
+  }
+}
+function onRefresh(event, ownerInstance) {
+  _getLiDog(ownerInstance).addClass('moving')
+  ownerInstance.triggerEvent('refresh')
+}
+function onRestore(event, ownerInstance) {
+  _getLiDog(ownerInstance).removeClass('moving')
+  ownerInstance.triggerEvent('restore')
+}
+
+module.exports = {
+  onPulling: onPulling,
+  onRefresh: onRefresh,
+  onRestore: onRestore,
+}

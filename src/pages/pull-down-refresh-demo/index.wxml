@@ -1,0 +1,74 @@
+<view class="container">
+	<li-scroll-view
+		wx:if="{{ title === '飞行超人' }}"
+		generic:selectable="flying-superman"
+		refresh-style="flyingSuperman"
+		refresh
+		refresh-bg-color="#926bf6"
+		trigger="{{ trigger }}"
+		bind:refresh="onRefresh"
+		bind:restore="onRestore"
+	>
+		<view class="content">
+			<view
+				wx:for="{{ 8 }}"
+				wx:key="item"
+				class="item"
+			>{{ index }}</view>
+		</view>
+	</li-scroll-view>
+	<li-scroll-view
+		wx:if="{{ title === '魔法师' }}"
+		generic:selectable="magician"
+		refresh-style="magician"
+		refresh
+		refresh-bg-color="#eee"
+		trigger="{{ trigger }}"
+		bind:refresh="onRefresh"
+		bind:restore="onRestore"
+	>
+		<view class="content">
+			<view
+				wx:for="{{ 8 }}"
+				wx:key="item"
+				class="item"
+			>{{ index }}</view>
+		</view>
+	</li-scroll-view>
+	<li-scroll-view
+		wx:if="{{ title === '小狗' }}"
+		generic:selectable="dog"
+		refresh-style="dog"
+		refresh
+		refresh-bg-color="#ade7db"
+		trigger="{{ trigger }}"
+		bind:refresh="onRefresh"
+		bind:restore="onRestore"
+	>
+		<view class="content">
+			<view
+				wx:for="{{ 8 }}"
+				wx:key="item"
+				class="item"
+			>{{ index }}</view>
+		</view>
+	</li-scroll-view>
+	<li-scroll-view
+		wx:if="{{ title === '热气球' }}"
+		generic:selectable="hot-balloon"
+		refresh-style="hotBalloon"
+		refresh
+		refresh-bg-color="#f9f9f9"
+		trigger="{{ trigger }}"
+		bind:refresh="onRefresh"
+		bind:restore="onRestore"
+	>
+		<view class="content">
+			<view
+				wx:for="{{ 8 }}"
+				wx:key="item"
+				class="item"
+			>{{ index }}</view>
+		</view>
+	</li-scroll-view>
+</view>

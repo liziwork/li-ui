@@ -1,0 +1,27 @@
+<wxs
+	src="../../li-ui/animations/hot-balloon/index.wxs"
+	module="wxs"
+/>
+
+<view class="container">
+	<refresh-item
+		generic:selectable="flying-superman"
+		title="飞行超人"
+		bg-color="#926bf6"
+	/>
+	<refresh-item
+		generic:selectable="dog"
+		title="小狗"
+		bg-color="#ade7db"
+	/>
+	<refresh-item
+		generic:selectable="magician"
+		title="魔法师"
+		bg-color="#eee"
+	/>
+	<refresh-item
+		generic:selectable="hot-balloon"
+		title="热气球"
+		bg-color="#f9f9f9"
+	/>
+</view>

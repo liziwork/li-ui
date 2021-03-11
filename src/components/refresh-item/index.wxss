@@ -1,0 +1,1 @@
+.c-refresh-item{width:100%}.c-refresh-item .title{display:flex;justify-content:space-between;align-items:center;padding:30rpx 20rpx;font-size:28rpx}.c-refresh-item .item{width:100%;height:200rpx}

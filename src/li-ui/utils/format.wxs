@@ -4,6 +4,37 @@ var fixUnit = function (value, unit = 'px') {
   return Number(value.replace(unit, ''))
 }
 
+var REGEXP = getRegExp('{|}|"', 'g')
+var REGEXPNAME = getRegExp('[A-Z]', 'g')
+
+var camelToDash = function (str) {
+  return str.replace(REGEXPNAME, function (item) {
+    return '-' + item.toLowerCase()
+  })
+}
+
+var formatStyle = function (obj) {
+  return JSON.stringify(obj)
+    .replace(REGEXP, '')
+    .split(',')
+    .map(function (item) {
+      var ls = item.split(':')
+      ls[0] = camelToDash(ls[0])
+      return ls.join(':')
+    })
+    .join(';')
+}
+
+var formatArrayStyle = function (arr, unit = 'px') {
+  return arr
+    .map(function (v) {
+      return v + unit
+    })
+    .join(' ')
+}
+
 module.exports = {
   fixUnit: fixUnit,
+  formatStyle: formatStyle,
+  formatArrayStyle: formatArrayStyle,
 }
