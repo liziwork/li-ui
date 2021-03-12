@@ -5,26 +5,39 @@ Page({
         title: '基础组件',
         children: [
           {
+            icon: 'button',
+            name: '按钮',
+            label: 'Button',
+            path: '',
+          },
+          {
             icon: 'baby',
             name: '图标',
             label: 'Icon',
             path: '',
           },
-        ],
-      },
-      {
-        title: '交互组件',
-        children: [
           {
-            icon: 'refresh',
-            name: '下拉刷新',
-            label: 'PullDownRefresh',
-            path: '../pull-down-refresh/index',
+            icon: 'album',
+            name: '图片',
+            label: 'Image',
+            path: '',
+          },
+          {
+            icon: 'divider',
+            name: '分割线',
+            label: 'Divider',
+            path: '',
+          },
+          {
+            icon: 'tag',
+            name: '标记',
+            label: 'Tag',
+            path: '',
           },
         ],
       },
       {
-        title: '视图组件',
+        title: '导航组件',
         children: [
           {
             icon: 'paperplane',
@@ -36,6 +49,46 @@ Page({
             icon: 'apps',
             name: '标签栏',
             label: 'TabBar',
+            path: '',
+          },
+          {
+            icon: 'burger',
+            name: '菜单栏',
+            label: 'Menus',
+            path: '',
+          },
+        ],
+      },
+      {
+        title: '交互组件',
+        children: [
+          {
+            icon: 'download',
+            name: '下拉刷新',
+            label: 'PullDownRefresh',
+            path: '../pull-down-refresh/index',
+          },
+          {
+            icon: 'upload',
+            name: '上拉加载',
+            label: 'LoadMore',
+            path: '',
+          },
+        ],
+      },
+      {
+        title: '视图组件',
+        children: [
+          {
+            icon: 'layers',
+            name: '标签页',
+            label: 'Tabs',
+            path: '',
+          },
+          {
+            icon: 'mouse',
+            name: '滚动视图',
+            label: 'ScrollView',
             path: '',
           },
           {

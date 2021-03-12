@@ -12,7 +12,12 @@
 		<text class="name">{{ name }}</text>
 		<text>{{ label }}</text>
 	</view>
+	<view
+		wx:if="{{ !path }}"
+		class="develop"
+	>开发中</view>
 	<li-icon
+		wx:else
 		name="chevron-right"
 		color="#ccc"
 	/>
