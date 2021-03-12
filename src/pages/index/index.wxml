@@ -4,6 +4,7 @@
 		<view class="title">
 			<text class="txt">Welcome to</text>
 			<text class="name">LI UI</text>
+			<text class="version">v1.0.0</text>
 		</view>
 		<button
 			class="share"

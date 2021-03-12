@@ -33,6 +33,18 @@
         {
           "name": "divider",
           "pathName": "pages/divider/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "icon",
+          "pathName": "pages/icon/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "icon-list",
+          "pathName": "pages/icon-list/index",
           "scene": null
         }
       ]

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "panel": "../../components/panel/index",
+    "li-icon": "../../li-ui/icon/index"
+  },
+  "navigationBarTitleText": "图标"
+}

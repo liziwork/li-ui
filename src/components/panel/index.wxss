@@ -1,1 +1,1 @@
-.c-panel .title{font-size:32rpx;color:#333;padding:30rpx 20rpx}.c-panel .content{width:100%}
+.c-panel{padding-bottom:20rpx}.c-panel .title{font-size:32rpx;color:#999;padding:30rpx 20rpx}.c-panel .content{width:100%}

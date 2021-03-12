@@ -4,7 +4,9 @@
 		"pages/waterfall/index",
 		"pages/pull-down-refresh/index",
 		"pages/pull-down-refresh-demo/index",
-		"pages/divider/index"
+		"pages/divider/index",
+		"pages/icon/index",
+		"pages/icon-list/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

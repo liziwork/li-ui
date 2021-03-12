@@ -1,0 +1,27 @@
+<view class="container">
+	<view class="search">
+		<view class="search-view">
+			<li-icon
+				class="icon"
+				name="search"
+				color="#333"
+			/>
+			<input
+				class="input"
+				type="text"
+				placeholder="搜索图标"
+				bind:input="onInput"
+			/>
+		</view>
+	</view>
+	<view class="list">
+		<view
+			class="item"
+			wx:for="{{ icons }}"
+			wx:key="item"
+		>
+			<li-icon name="{{ item }}" />
+			<view class="name">{{ item }}</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "li-icon": "../../li-ui/icon/index"
+  },
+  "navigationBarTitleText": "图标列表",
+  "backgroundColor": "#f9f9f9",
+  "backgroundColorTop": "#f9f9f9",
+  "backgroundColorBottom": "#f9f9f9"
+}

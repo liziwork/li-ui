@@ -1,0 +1,62 @@
+page {
+  background: #f9f9f9;
+}
+.container {
+  .search {
+    width: calc(100% - 40rpx);
+    padding: 20rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #f9f9f9;
+
+    .search-view {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 70rpx;
+      background: white;
+      border-radius: 35rpx;
+
+      .icon {
+        padding: 0 20rpx;
+      }
+
+      .input {
+        flex-grow: 1;
+        color: #333;
+        font-size: 26rpx;
+      }
+    }
+  }
+
+  .list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-flow: row dense;
+    grid-gap: 1px;
+    padding-top: 110rpx;
+
+    .item {
+      width: 100%;
+      height: calc(100vw / 4);
+      background: #fff;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+
+      .name {
+        font-size: 24rpx;
+        color: #999;
+        padding-top: 10rpx;
+        max-width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
