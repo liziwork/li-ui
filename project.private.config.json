@@ -45,6 +45,12 @@
         {
           "name": "icon-list",
           "pathName": "pages/icon-list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "image",
+          "pathName": "pages/image/index",
           "scene": null
         }
       ]

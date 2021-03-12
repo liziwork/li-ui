@@ -1,0 +1,1 @@
+.li-image{display:flex;position:relative}.li-image .image{width:100%;height:100%;position:relative;z-index:9}.li-image.round{width:100%;height:100%;border-radius:50%;overflow:hidden}.li-image .loading,.li-image .error{width:100%;height:100%;position:absolute;left:0;top:0;display:flex;justify-content:center;align-items:center;color:#dcdede}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "panel": "../../components/panel/index",
+    "li-image": "../../li-ui/image/index"
+  },
+  "navigationBarTitleText": "图片"
+}

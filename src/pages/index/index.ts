@@ -20,7 +20,7 @@ Page({
             icon: 'album',
             name: '图片',
             label: 'Image',
-            path: '',
+            path: '../image/index',
           },
           {
             icon: 'divider',

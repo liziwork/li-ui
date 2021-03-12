@@ -1,0 +1,76 @@
+<view class="container">
+	<panel title="基础用法">
+		<view class="content">
+			<li-image
+				class="item"
+				src="{{ imageSrc }}"
+			/>
+		</view>
+	</panel>
+	<panel title="圆角">
+		<view class="content">
+			<li-image
+				class="item"
+				src="{{ imageSrc }}"
+				round
+			/>
+			<li-image
+				class="item"
+				src="{{ imageSrc }}"
+				radius="20rpx"
+			/>
+		</view>
+	</panel>
+	<panel title="裁剪">
+		<view class="content">
+			<view
+				wx:for="{{ imageModes }}"
+				wx:key="item"
+				class="item"
+			>
+				<li-image
+					mode="{{ item }}"
+					src="{{ imageSrc }}"
+				/>
+				<text class="name">{{ item }}</text>
+			</view>
+		</view>
+	</panel>
+	<panel title="加载提示">
+		<view class="content">
+			<view class="item">
+				<li-image />
+				<text class="name">默认提示</text>
+			</view>
+			<view class="item">
+				<li-image loading-slot>
+					<view
+						slot="loading"
+						style="font-size: 26rpx;color: #555;"
+					>加载中</view>
+				</li-image>
+				<text class="name">自定义提示</text>
+			</view>
+		</view>
+	</panel>
+	<panel title="失败提示">
+		<view class="content">
+			<view class="item">
+				<li-image src="0" />
+				<text class="name">默认提示</text>
+			</view>
+			<view class="item">
+				<li-image
+					error-slot
+					src="1"
+				>
+					<view
+						slot="error"
+						style="font-size: 26rpx;color: #555;"
+					>加载失败</view>
+				</li-image>
+				<text class="name">自定义提示</text>
+			</view>
+		</view>
+	</panel>
+</view>

@@ -6,7 +6,8 @@
 		"pages/pull-down-refresh-demo/index",
 		"pages/divider/index",
 		"pages/icon/index",
-		"pages/icon-list/index"
+		"pages/icon-list/index",
+		"pages/image/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

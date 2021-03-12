@@ -1,0 +1,1 @@
+.container .content{padding:0 20rpx;display:flex;flex-flow:row wrap}.container .content .item{margin-right:30rpx;display:inline-flex;flex-flow:column;align-items:center}.container .content .item .name{font-size:26rpx;color:#999;padding:20rpx 0}
