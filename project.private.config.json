@@ -29,6 +29,11 @@
           "pathName": "pages/pull-down-refresh-demo/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "divider",
+          "pathName": "pages/divider/index",
+          "scene": null
         }
       ]
     }

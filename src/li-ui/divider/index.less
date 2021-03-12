@@ -1,0 +1,55 @@
+.li-divider {
+  --border-color: #eee;
+  --border-style: solid;
+  --color: #aaa;
+  --font-size: 28rpx;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32rpx 0;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-color: var(--border-color);
+    border-style: var(--border-style);
+    border-width: 1px 0 0;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &.show-text {
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 50%;
+      flex: 1;
+    }
+    .content {
+      padding: 0 40rpx;
+      font-size: var(--font-size);
+      color: var(--color);
+    }
+  }
+
+  &.left {
+    &::before {
+      max-width: 10%;
+    }
+  }
+
+  &.right {
+    &::after {
+      max-width: 10%;
+    }
+  }
+}

@@ -14,7 +14,7 @@ Page({
             icon: 'baby',
             name: '图标',
             label: 'Icon',
-            path: '',
+            path: '../icon/index',
           },
           {
             icon: 'album',
@@ -26,7 +26,7 @@ Page({
             icon: 'divider',
             name: '分割线',
             label: 'Divider',
-            path: '',
+            path: '../divider/index',
           },
           {
             icon: 'tag',

@@ -1,0 +1,6 @@
+<view class="c-panel">
+	<view class="title">{{ title }}</view>
+	<view class="content">
+		<slot />
+	</view>
+</view>

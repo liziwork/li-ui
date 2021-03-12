@@ -1,0 +1,49 @@
+<viwe class="container">
+	<panel title="基础用法">
+		<li-divider />
+	</panel>
+	<panel title="展示文本">
+		<li-divider text="文本" />
+	</panel>
+	<panel title="虚线">
+		<li-divider dashed />
+		<li-divider
+			dashed
+			text="文本"
+		/>
+	</panel>
+	<panel title="文本位置">
+		<li-divider
+			text="文本"
+			position="left"
+		/>
+		<li-divider
+			text="文本"
+			position="center"
+		/>
+		<li-divider
+			text="文本"
+			position="right"
+		/>
+	</panel>
+	<panel title="自定义样式">
+		<li-divider
+			text="文本"
+			color="#1989fa"
+			border-color="#1989fa"
+			font-size="30rpx"
+		/>
+		<li-divider
+			text="文本"
+			custom-style="--color: red; --border-color: red"
+		/>
+	</panel>
+	<panel title="自定义内容">
+		<li-divider
+			custom
+			safeArea
+		>
+			<li-icon name="sync" />
+		</li-divider>
+	</panel>
+</viwe>

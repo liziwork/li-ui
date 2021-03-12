@@ -1,0 +1,16 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+/>
+
+<view
+	class="li-divider"
+	data="{{ {text, dashed, position, color, borderColor, fontSize, custom } }}"
+	change:data="{{ wxs.setStyle }}"
+	style="{{ customStyle }}"
+>
+	<div class="content">
+		{{ text }}
+		<slot></slot>
+	</div>
+</view>

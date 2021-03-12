@@ -1,19 +1,20 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/waterfall/index",
-    "pages/pull-down-refresh/index",
-    "pages/pull-down-refresh-demo/index"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "LIUI",
-    "navigationBarTextStyle": "black",
-    "backgroundColorTop": "#ffffff",
-    "backgroundColorBottom": "#ffffff",
-    "backgroundColor": "#ffffff"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+	"pages": [
+		"pages/index/index",
+		"pages/waterfall/index",
+		"pages/pull-down-refresh/index",
+		"pages/pull-down-refresh-demo/index",
+		"pages/divider/index"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTitleText": "LIUI",
+		"navigationBarTextStyle": "black",
+		"backgroundColorTop": "#ffffff",
+		"backgroundColorBottom": "#ffffff",
+		"backgroundColor": "#ffffff"
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json"
 }
