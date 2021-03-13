@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "li-safe-area": "../../li-ui/safe-area/index"
+  },
+  "navigationStyle": "custom",
+  "disableScroll": true
+}

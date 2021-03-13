@@ -29,6 +29,12 @@ Page({
             path: '../divider/index',
           },
           {
+            icon: 'mobile',
+            name: '安全区占位符',
+            label: 'SafeArea',
+            path: '../safe-area/index',
+          },
+          {
             icon: 'tag',
             name: '标记',
             label: 'Tag',

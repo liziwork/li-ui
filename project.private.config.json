@@ -57,6 +57,12 @@
         {
           "name": "loading",
           "pathName": "pages/loading/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "safe-area",
+          "pathName": "pages/safe-area/index",
           "scene": null
         }
       ]

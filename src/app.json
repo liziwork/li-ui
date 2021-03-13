@@ -8,7 +8,8 @@
 		"pages/icon/index",
 		"pages/icon-list/index",
 		"pages/image/index",
-		"pages/loading/index"
+		"pages/loading/index",
+		"pages/safe-area/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

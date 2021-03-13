@@ -1,0 +1,12 @@
+<view class="container">
+	<li-safe-area
+		area="top"
+		color="#5474fb"
+		style="width: 100%"
+	/>
+	<view bind:tap="click">返回首页</view>
+	<li-safe-area
+		color="#5474fb"
+		style="width: 100%"
+	/>
+</view>

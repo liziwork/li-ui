@@ -1,0 +1,11 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+/>
+<view
+	class="li-safe-area"
+	data="{{ {area, color, height, system} }}"
+	change:data="{{ wxs.init }}"
+>
+	<slot />
+</view>
