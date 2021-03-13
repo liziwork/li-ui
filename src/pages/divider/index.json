@@ -2,7 +2,7 @@
   "usingComponents": {
     "panel": "../../components/panel/index",
     "li-divider": "../../li-ui/divider/index",
-    "li-icon": "../../li-ui/icon/index"
+    "li-loading": "../../li-ui/loading/index"
   },
   "navigationBarTitleText": "分割线"
 }

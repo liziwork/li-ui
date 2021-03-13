@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "li-divider": "../divider/index",
+    "li-loading": "../loading/index"
+  }
+}

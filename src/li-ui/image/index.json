@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "li-icon": "../../li-ui/icon/index"
+    "li-icon": "../icon/index"
   }
 }

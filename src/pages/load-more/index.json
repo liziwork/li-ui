@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "li-load-more": "../../li-ui/load-more/index"
+  },
+  "navigationBarTitleText": "加载更多"
+}

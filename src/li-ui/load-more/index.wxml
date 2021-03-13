@@ -1,0 +1,31 @@
+<view class="li-load-more">
+	<block wx:if="{{ status === 'loading' }}">
+		<slot
+			wx:if="{{ custom }}"
+			name="loading"
+		/>
+		<li-divider
+			wx:else
+			custom
+			safeArea
+		>
+			<li-loading
+				key="{{ loadingKey }}"
+				scale="{{ loadingScale }}"
+				color="{{ color }}"
+			/>
+		</li-divider>
+	</block>
+	<block wx:if="{{ status === 'loaded' }}">
+		<slot
+			wx:if="{{ custom }}"
+			name="loaded"
+		/>
+		<li-divider
+			wx:else
+			text="{{ text }}"
+			color="{{ color }}"
+			safeArea
+		/>
+	</block>
+</view>

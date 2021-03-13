@@ -14,3 +14,7 @@
 		<slot></slot>
 	</div>
 </view>
+<li-safe-area
+	wx:if="{{ safeArea }}"
+	height="32rpx"
+/>

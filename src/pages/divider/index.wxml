@@ -43,7 +43,10 @@
 			custom
 			safeArea
 		>
-			<li-icon name="sync" />
+			<li-loading
+				key="14"
+				scale="0.7"
+			/>
 		</li-divider>
 	</panel>
 </viwe>

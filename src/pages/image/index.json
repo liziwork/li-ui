@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "panel": "../../components/panel/index",
-    "li-image": "../../li-ui/image/index"
+    "li-image": "../../li-ui/image/index",
+    "li-loading": "../../li-ui/loading/index"
   },
   "navigationBarTitleText": "图片"
 }

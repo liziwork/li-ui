@@ -84,7 +84,7 @@ Page({
             icon: 'upload',
             name: '上拉加载',
             label: 'LoadMore',
-            path: '',
+            path: '../load-more/index',
           },
         ],
       },

@@ -9,7 +9,8 @@
 		"pages/icon-list/index",
 		"pages/image/index",
 		"pages/loading/index",
-		"pages/safe-area/index"
+		"pages/safe-area/index",
+		"pages/load-more/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

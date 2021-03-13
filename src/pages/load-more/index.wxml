@@ -1,0 +1,10 @@
+<view class="container">
+	<view class="content">
+		<view
+			wx:for="{{ items }}"
+			wx:key="item"
+			class="item"
+		>{{ item }}</view>
+	</view>
+	<li-load-more status="{{ status }}" />
+</view>
