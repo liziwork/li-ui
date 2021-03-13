@@ -1,0 +1,15 @@
+<template name="loading-0">
+	<view class="loading-0">
+		<view
+			wx:for="{{ 4 }}"
+			wx:key="item"
+			class="l_square"
+		>
+			<view
+				wx:for="{{ 3 }}"
+				wx:key="item"
+				class="span"
+			/>
+		</view>
+	</view>
+</template>

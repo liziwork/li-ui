@@ -1,0 +1,32 @@
+<import src="./templates/loading-0.wxml" />
+<import src="./templates/loading-1.wxml" />
+<import src="./templates/loading-2.wxml" />
+<import src="./templates/loading-3.wxml" />
+<import src="./templates/loading-4.wxml" />
+<import src="./templates/loading-5.wxml" />
+<import src="./templates/loading-6.wxml" />
+<import src="./templates/loading-7.wxml" />
+<import src="./templates/loading-8.wxml" />
+<import src="./templates/loading-9.wxml" />
+<import src="./templates/loading-10.wxml" />
+<import src="./templates/loading-11.wxml" />
+<import src="./templates/loading-12.wxml" />
+<import src="./templates/loading-14.wxml" />
+<wxs
+	src="./index.wxs"
+	module="wxs"
+/>
+
+<view
+	class="li-loading"
+	style="{{ wxs.setStyle({color, bg, scale}) }}"
+>
+	<view class="loading-view">
+		<template
+			wx:for="{{ 21 }}"
+			wx:key="item"
+			wx:if="{{ key === index }}"
+			is="loading-{{ index }}"
+		/>
+	</view>
+</view>

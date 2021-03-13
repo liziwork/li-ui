@@ -1,0 +1,15 @@
+module.exports = {
+  setStyle: function (style) {
+    var string = ''
+    if (style.color) {
+      string += '--color: ' + style.color + ';'
+    }
+    if (style.bg) {
+      string += '--bg: ' + style.bg + ';'
+    }
+    if (style.scale) {
+      string += '--scale: ' + style.scale + ';'
+    }
+    return string
+  },
+}

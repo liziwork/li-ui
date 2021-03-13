@@ -51,6 +51,12 @@
         {
           "name": "image",
           "pathName": "pages/image/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "loading",
+          "pathName": "pages/loading/index",
           "scene": null
         }
       ]

@@ -1,0 +1,31 @@
+.loading-4 {
+  width: 108rpx;
+  height: 36rpx;
+  display: flex;
+  position: relative;
+  transform: scale(0.9, 0.9);
+
+  .block {
+    width: 20rpx;
+    height: 20rpx;
+    margin: 8rpx;
+    border-radius: 100%;
+    background: var(--color);
+    animation: ball-beat 0.7s -0.15s infinite linear;
+
+    &:nth-child(2n-1) {
+      animation-delay: -0.5s;
+    }
+  }
+}
+
+@keyframes ball-beat {
+  50% {
+    opacity: 0.2;
+    transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

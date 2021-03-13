@@ -7,7 +7,8 @@
 		"pages/divider/index",
 		"pages/icon/index",
 		"pages/icon-list/index",
-		"pages/image/index"
+		"pages/image/index",
+		"pages/loading/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

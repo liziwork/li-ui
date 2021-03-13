@@ -1,0 +1,43 @@
+.loading-7 {
+  width: 20rpx;
+  height: 20rpx;
+  transform: scale(0.9, 0.9);
+  position: relative;
+  border-radius: 100%;
+  background: var(--color);
+  animation: ball-rotate-animation 1s cubic-bezier(0.7, -0.13, 0.22, 0.86)
+    infinite;
+
+  &:before,
+  &:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    margin: inherit;
+    content: '';
+    background: currentColor;
+    border-radius: inherit;
+    opacity: 0.8;
+  }
+
+  &:before {
+    top: 0;
+    left: -150%;
+  }
+  &:after {
+    top: 0;
+    left: 150%;
+  }
+}
+
+@keyframes ball-rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

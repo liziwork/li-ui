@@ -1,0 +1,110 @@
+.loading-0 {
+  width: 172rpx;
+  height: 128rpx;
+  transform: scale(0.4, 0.4);
+  transform-origin: 50% 50%;
+
+  .l_square {
+    position: relative;
+
+    &:nth-child(1) {
+      margin-left: 0rpx;
+      .span {
+        animation: animsquare1 2s infinite ease-in;
+      }
+    }
+    &:nth-child(2) {
+      margin-left: 44rpx;
+      .span {
+        animation: animsquare2 2s infinite ease-in;
+      }
+    }
+    &:nth-child(3) {
+      margin-left: 88rpx;
+      .span {
+        animation: animsquare3 2s infinite ease-in;
+      }
+    }
+    &:nth-child(4) {
+      margin-left: 132rpx;
+      .span {
+        animation: animsquare4 2s infinite ease-in;
+      }
+    }
+
+    .span {
+      position: absolute;
+      top: 0rpx;
+      left: 20rpx;
+      height: 36rpx;
+      width: 36rpx;
+      border-radius: 2rpx;
+      background-color: var(--color);
+
+      &:nth-child(1) {
+        top: 0rpx;
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        top: 44rpx;
+        animation-delay: 0.15s;
+      }
+      &:nth-child(3) {
+        top: 88rpx;
+        animation-delay: 0.3s;
+      }
+    }
+  }
+}
+
+@keyframes animsquare1 {
+  0%,
+  5%,
+  95%,
+  100% {
+    transform: translate(0rpx, 0rpx) rotate(0deg);
+  }
+  30%,
+  70% {
+    transform: translate(-40rpx, 0rpx) rotate(-90deg);
+  }
+}
+
+@keyframes animsquare2 {
+  0%,
+  10%,
+  90%,
+  100% {
+    transform: translate(0rpx, 0rpx) rotate(0deg);
+  }
+  35%,
+  65% {
+    transform: translate(-40rpx, 0rpx) rotate(-90deg);
+  }
+}
+
+@keyframes animsquare3 {
+  0%,
+  15%,
+  85%,
+  100% {
+    transform: translate(0rpx, 0rpx) rotate(0deg);
+  }
+  40%,
+  60% {
+    transform: translate(-40rpx, 0rpx) rotate(-90deg);
+  }
+}
+
+@keyframes animsquare4 {
+  0%,
+  20%,
+  80%,
+  100% {
+    transform: translate(0rpx, 0rpx) rotate(0deg);
+  }
+  45%,
+  55% {
+    transform: translate(-40rpx, 0rpx) rotate(-90deg);
+  }
+}

@@ -1,0 +1,9 @@
+<template name="loading-3">
+	<view class="loading-3">
+		<view
+			wx:for="{{ 3 }}"
+			wx:key="item"
+			class="block"
+		/>
+	</view>
+</template>

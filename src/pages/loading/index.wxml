@@ -1,0 +1,76 @@
+<view class="container">
+	<panel title="基础用法">
+		<view class="content">
+			<view class="item">
+				<li-loading
+					class="loading"
+					key="14"
+				/>
+			</view>
+			<view class="item">
+				<li-loading
+					class="loading"
+					key="8"
+				/>
+			</view>
+		</view>
+	</panel>
+	<panel title="自定义颜色">
+		<view class="content">
+			<view class="item">
+				<li-loading
+					class="loading"
+					key="1"
+					color="#5374fb"
+				/>
+			</view>
+			<view class="item">
+				<li-loading
+					class="loading"
+					key="15"
+					color="#1aba61"
+				/>
+			</view>
+		</view>
+	</panel>
+	<panel title="自定义大小">
+		<view class="content">
+			<view class="item">
+				<li-loading
+					class="loading"
+					key="11"
+					scale="2"
+				/>
+			</view>
+			<view class="item">
+				<li-loading
+					class="loading"
+					key="20"
+					scale="0.5"
+				/>
+			</view>
+			<view class="item">
+				<li-loading
+					class="loading"
+					key="19"
+					scale="1.5"
+				/>
+			</view>
+		</view>
+	</panel>
+	<panel title="loading列表">
+		<view class="content list">
+			<view
+				wx:for="{{ 21 }}"
+				wx:key="item"
+				class="item"
+			>
+				<li-loading
+					class="loading"
+					key="{{ index }}"
+				/>
+				<text class="name">{{ index }}</text>
+			</view>
+		</view>
+	</panel>
+</view>

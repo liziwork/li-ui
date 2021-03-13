@@ -1,0 +1,3 @@
+<template name="loading-9">
+	<view class="loading-9"></view>
+</template>

@@ -1,0 +1,43 @@
+.loading-15 {
+  text-indent: -9999rem;
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: linear-gradient(to right, var(--color) 10%, transparent 42%);
+  position: relative;
+  animation: load3 1.4s infinite linear;
+
+  &:before {
+    width: 50%;
+    height: 50%;
+    background: var(--color);
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+
+  &:after {
+    background: var(--bg);
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@keyframes load3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,32 @@
+.loading-16 {
+  --bg: rgba(0, 0, 0, 0.05);
+
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  border-top: 6rpx solid var(--bg);
+  border-right: 6rpx solid var(--bg);
+  border-bottom: 6rpx solid var(--bg);
+  border-left: 6rpx solid var(--color);
+  animation: load8 1.1s infinite linear;
+  border-radius: 50%;
+}
+
+.loading-16:after {
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

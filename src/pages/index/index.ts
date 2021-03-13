@@ -63,6 +63,12 @@ Page({
         title: '交互组件',
         children: [
           {
+            icon: 'loader',
+            name: '加载动画',
+            label: 'Loading',
+            path: '../loading/index',
+          },
+          {
             icon: 'download',
             name: '下拉刷新',
             label: 'PullDownRefresh',

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "panel": "../../components/panel/index",
+    "li-loading": "../../li-ui/loading/index"
+  },
+  "navigationBarTitleText": "加载动画"
+}
