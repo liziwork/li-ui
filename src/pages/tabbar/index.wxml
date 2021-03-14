@@ -1,0 +1,97 @@
+<view class="container">
+	<panel title="默认样式">
+		<li-tabbar
+			color="#666"
+			active-color="#111"
+			tabs="{{ tabs }}"
+		/>
+		<li-tabbar
+			color="#666"
+			active-color="#111"
+			tabs="{{ tabs2 }}"
+		/>
+		<li-tabbar
+			color="#666"
+			active-color="#5474fb"
+			hide-text
+			active-style="dot"
+			tabs="{{ tabs3 }}"
+			size="50rpx"
+		/>
+	</panel>
+	<panel title="内联显示">
+		<li-tabbar
+			margin="{{ ['0px', '20rpx'] }}"
+			bg-color="#5474fb"
+			color="rgba(255,255,255,0.7)"
+			active-color="#fff"
+			inline
+			tabs="{{ tabs }}"
+		></li-tabbar>
+	</panel>
+	<panel title="自定义颜色">
+		<li-tabbar
+			bg-color="linear-gradient(to right, #38c9fc, #2abefa)"
+			color="rgba(255,255,255,0.7)"
+			active-color="#fff"
+			tabs="{{ tabs }}"
+		/>
+	</panel>
+	<panel title="玻璃毛背景">
+		<view
+			style="background: linear-gradient(to right, #38c9fc, #2abefa); padding: 50rpx 20rpx;display: flex; flex-flow: column"
+		>
+			<li-tabbar
+				bg-color="rgba(255,255,255,0.35)"
+				active-color="#fff"
+				color="#111"
+				glass
+				tabs="{{ tabs }}"
+			/>
+			<li-tabbar
+				style="margin-top: 50rpx;"
+				bg-color="rgba(255,255,255,0.35)"
+				active-color="#fff"
+				color="#111"
+				inline
+				glass
+				tabs="{{ tabs }}"
+			/>
+		</view>
+	</panel>
+	<panel title="激活状态">
+		<li-tabbar
+			margin="{{ ['20rpx', '0px'] }}"
+			color="#999"
+			active-style="dot"
+			active-color="#5474fb"
+			tabs="{{ tabs }}"
+		/>
+		<li-tabbar
+			margin="{{ ['20rpx', '0px'] }}"
+			color="#fff"
+			bg-color="#5474fb"
+			active-style="block"
+			active-color="#5474fb"
+			active-bg-color="#ffff"
+			tabs="{{ tabs }}"
+		/>
+	</panel>
+	<panel title="隐藏文字">
+		<li-tabbar
+			color="#666"
+			active-color="#5474fb"
+			hide-text
+			active-style="dot"
+			tabs="{{ tabs }}"
+		/>
+		<li-tabbar
+			color="#666"
+			active-color="#fff"
+			active-bg-color="#5474fb"
+			hide-text
+			active-style="block"
+			tabs="{{ tabs }}"
+		/>
+	</panel>
+</view>

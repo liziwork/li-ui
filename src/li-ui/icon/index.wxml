@@ -1,4 +1,13 @@
-<view class="li-icon">
+<wxs
+	src="./index.wxs"
+	module="wxs"
+></wxs>
+
+<view
+	class="li-icon"
+	options="{{ {size, color, dotBg} }}"
+	change:options="{{ wxs.init }}"
+>
 	<image
 		wx:if="{{ src }}"
 		src="{{ src }}"
@@ -7,7 +16,6 @@
 	<view
 		wx:else
 		class="iconfont {{ name }}"
-		style="font-size: {{ size }};color: {{ color }}"
 	/>
 	<view
 		wx:if="{{ dot }}"

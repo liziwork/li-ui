@@ -1,0 +1,39 @@
+module.exports = {
+  init: function (options, oldValue, ownerInstance, instance) {
+    var style = {}
+    if (options.color) {
+      style['--color'] = options.color
+    }
+    if (options.size) {
+      style['--size'] = options.size
+    }
+    if (options.margin.length) {
+      style['--margin'] = options.margin.join(' ')
+    }
+    if (options.radius.length) {
+      style['--radius'] = options.radius.join(' ')
+    }
+    if (options.bgColor) {
+      style['--bg-color'] = options.bgColor
+    }
+    if (options.activeColor) {
+      style['--active-color'] = options.activeColor
+    }
+    if (options.activeBgColor) {
+      style['--active-bg-color'] = options.activeBgColor
+    }
+    instance.setStyle(style)
+    if (options.inline) {
+      instance.addClass('inline')
+    }
+    if (options.activeStyle === 'block') {
+      instance.addClass('active-block')
+    }
+    if (options.activeStyle === 'dot') {
+      instance.addClass('active-dot')
+    }
+    if (options.glass) {
+      instance.addClass('glass')
+    }
+  },
+}

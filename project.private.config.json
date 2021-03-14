@@ -75,6 +75,12 @@
         {
           "name": "navbar",
           "pathName": "pages/navbar/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "tabbar",
+          "pathName": "pages/tabbar/index",
           "scene": null
         }
       ]

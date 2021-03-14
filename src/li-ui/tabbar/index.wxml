@@ -1,0 +1,45 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+></wxs>
+
+<view
+	class="li-tabbar"
+	options="{{ {margin, radius, size, filter, shadow, glass, color, bgColor, inline, activeStyle, activeColor, activeBgColor} }}"
+	change:options="{{ wxs.init }}"
+	style="--count: {{ tabs.length }}"
+>
+	<view class="tabs">
+		<view
+			wx:for="{{ tabs }}"
+			wx:key="item"
+			class="tab"
+		>
+			<view
+				class="block {{ index === active ? 'active' : '' }}"
+				data-index="{{ index }}"
+				bind:tap="click"
+			>
+				<view
+					wx:if="{{ item.avatar }}"
+					class="avatar"
+				>
+					<open-data type="userAvatarUrl" />
+				</view>
+				<li-icon
+					wx:else
+					name="{{ item.icon }}"
+					color="{{ index === active ? activeColor : color }}"
+					dot="{{ item.dot }}"
+					info="{{ item.info }}"
+					size="{{ size }}"
+				/>
+				<text
+					wx:if="{{ !hideText }}"
+					class="text"
+				>{{ item.text }}</text>
+			</view>
+		</view>
+	</view>
+	<li-safe-area height="{{ margin.length ? margin[0] : '0px' }}" />
+</view>

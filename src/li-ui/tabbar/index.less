@@ -1,0 +1,108 @@
+.li-tabbar {
+  --count: 5;
+  --size: 40rpx;
+  --color: #111;
+  --bg-color: #fff;
+  --active-color: #111;
+  --active-bg-color: #fff;
+  --margin: 0;
+  --radius: 10rpx;
+  --filter: 30rpx;
+  --shadow: 0 8px 32px 0 rgba(95, 99, 167, 0.37);
+
+  background: var(--bg-color);
+  display: flex;
+  flex-flow: column;
+
+  &.glass,
+  &.glass.inline .tabs {
+    background: var(--bg-color);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(var(--filter));
+    -webkit-backdrop-filter: blur(var(--filter));
+    border-radius: var(--radius);
+  }
+
+  &.inline {
+    background: transparent;
+    box-shadow: none;
+
+    .tabs {
+      background: var(--bg-color);
+      border-radius: var(--radius);
+    }
+  }
+
+  &.active-block {
+    .block {
+      &.active {
+        background: var(--active-bg-color);
+        border-radius: var(--radius);
+        color: var(--active-color);
+        box-shadow: var(--shadow);
+      }
+    }
+  }
+
+  &.active-dot {
+    .block {
+      &::after {
+        content: '';
+        width: 6rpx;
+        height: 6rpx;
+        border-radius: 100%;
+        background: var(--color);
+        margin-top: 4rpx;
+        opacity: 0;
+      }
+
+      &.active {
+        &::after {
+          background: var(--active-color);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(var(--count), 1fr);
+    justify-content: center;
+    align-content: center;
+    margin: var(--margin);
+
+    .tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .block {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20rpx 30rpx;
+        border-radius: var(--radius);
+        color: var(--color);
+
+        .avatar {
+          width: var(--size);
+          height: var(--size);
+          border-radius: 100%;
+          overflow: hidden;
+          display: flex;
+        }
+
+        .text {
+          font-size: 26rpx;
+          padding-top: 4rpx;
+        }
+
+        &.active {
+          color: var(--active-color);
+        }
+      }
+    }
+  }
+}

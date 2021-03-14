@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "panel": "../../components/panel/index",
+    "li-tabbar": "../../li-ui/tabbar/index"
+  },
+  "navigationBarTitleText": "标签栏"
+}

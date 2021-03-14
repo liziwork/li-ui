@@ -55,7 +55,7 @@ Page({
             icon: 'apps',
             name: '标签栏',
             label: 'TabBar',
-            path: '',
+            path: '../tabbar/index',
           },
           {
             icon: 'burger',
