@@ -39,7 +39,7 @@
 		>
 			<li-icon
 				slot="icon"
-				src="../../assets/icons/设置.svg"
+				src="../../assets/icons/setting.svg"
 				size="40rpx"
 			/>
 			<view

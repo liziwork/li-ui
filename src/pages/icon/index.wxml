@@ -90,32 +90,32 @@
 		<view class="content">
 			<li-icon
 				class="item"
-				src="../../assets/icons/西瓜.svg"
+				src="../../assets/icons/watermelon.svg"
 				size="50rpx"
 			/>
 			<li-icon
 				class="item"
-				src="../../assets/icons/椰子.svg"
+				src="../../assets/icons/coconut.svg"
 				size="50rpx"
 			/>
 			<li-icon
 				class="item"
-				src="../../assets/icons/优惠券.svg"
+				src="../../assets/icons/coupon.svg"
 				size="50rpx"
 			/>
 			<li-icon
 				class="item"
-				src="../../assets/icons/设置.svg"
+				src="../../assets/icons/setting.svg"
 				size="50rpx"
 			/>
 			<li-icon
 				class="item"
-				src="../../assets/icons/摄影.svg"
+				src="../../assets/icons/photo.svg"
 				size="50rpx"
 			/>
 			<li-icon
 				class="item"
-				src="../../assets/icons/音乐.svg"
+				src="../../assets/icons/music.svg"
 				size="50rpx"
 			/>
 		</view>
