@@ -1,0 +1,65 @@
+<view class="container">
+	<panel title="默认样式">
+		<li-navbar title="导航栏" />
+	</panel>
+	<panel title="自定义文字">
+		<li-navbar title="详情页" />
+	</panel>
+	<panel title="自定义图标">
+		<li-navbar
+			title="导航栏"
+			icon="close"
+		/>
+	</panel>
+	<panel title="自定义事件">
+		<li-navbar
+			title="导航栏"
+			icon="share"
+			customBack
+			bind:back="back"
+			bind:title="title"
+		/>
+	</panel>
+	<panel title="自定义颜色">
+		<li-navbar
+			title="导航栏"
+			color="#5474fb"
+		/>
+		<li-navbar
+			title="导航栏"
+			color="#fff"
+			bg-color="#5474fb"
+		/>
+	</panel>
+	<panel title="自定义内容">
+		<li-navbar
+			title="导航栏"
+			icon-slot
+			title-slot
+		>
+			<li-icon
+				slot="icon"
+				src="../../assets/icons/设置.svg"
+				size="40rpx"
+			/>
+			<view
+				slot="title"
+				class="title"
+				style="width: 100%;height:10px;background: #333"
+			></view>
+		</li-navbar>
+	</panel>
+	<panel title="额外内容">
+		<li-navbar
+			title="导航栏"
+			color="#fff"
+			bg-color="#5474fb"
+		>
+			<view
+				slot="other"
+				style="width: 100%;height: 100rpx;background:#1abefd"
+			>自定义额外内容</view>
+		</li-navbar>
+	</panel>
+</view>
+<li-safe-area />

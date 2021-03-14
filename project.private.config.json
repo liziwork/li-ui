@@ -69,6 +69,12 @@
         {
           "name": "load-more",
           "pathName": "pages/load-more/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "navbar",
+          "pathName": "pages/navbar/index",
           "scene": null
         }
       ]

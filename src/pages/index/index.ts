@@ -49,7 +49,7 @@ Page({
             icon: 'paperplane',
             name: '导航栏',
             label: 'NavBar',
-            path: '',
+            path: '../navbar/index',
           },
           {
             icon: 'apps',

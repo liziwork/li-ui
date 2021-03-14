@@ -6,7 +6,7 @@ const {
   statusBarHeight,
   platform,
   system,
-  safeArea
+  safeArea,
 } = wx.getSystemInfoSync()
 
 const PX = windowWidth - right
@@ -16,11 +16,11 @@ export default {
   width,
   statusBarHeight,
   navBarHeight: height || 32,
-  navBarWidth: right - width - PX * 2,
+  navBarWidth: right - width * 2 - PX * 2,
   navBarPadding: [PY, PX],
   safeAreaBottom: safeArea.bottom - safeArea.height,
   brand,
   model,
   platform,
-  system
+  system,
 }

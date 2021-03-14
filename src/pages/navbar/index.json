@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "panel": "../../components/panel/index",
+    "li-navbar": "../../li-ui/navbar/index",
+    "li-icon": "../../li-ui/icon/index"
+  },
+  "navigationBarTitleText": "导航栏"
+}
