@@ -1,0 +1,45 @@
+<view class="c-card {{ value.row ? 'row' : '' }}">
+	<view class="loaded-view">
+		<li-image
+			width="100%"
+			height="100%"
+			src="{{ value.image }}"
+			mode="aspectFill"
+		/>
+	</view>
+	<view class="content">
+		<view class="title">{{ value.title }}</view>
+		<view class="action">
+			<view class="item">
+				<li-icon
+					name="share"
+					size="30rpx"
+					color="#999"
+				/>
+				<text class="number">{{ value.repin_count }}</text>
+			</view>
+			<view class="item">
+				<li-icon
+					name="like"
+					size="30rpx"
+					color="#999"
+				/>
+				<text class="number">{{ value.like_count }}</text>
+			</view>
+		</view>
+		<view class="author">
+			<view class="avatar">
+				<li-image
+					width="100%"
+					height="100%"
+					src="https://hbimg.huabanimg.com/{{ value.author.avatar }}_sq75sf/format/webp"
+				/>
+			</view>
+			<view class="info">
+				<view class="nickname">{{ value.author.username }}</view>
+				<view class="name">采集到</view>
+				<view class="category">{{ value.board }}</view>
+			</view>
+		</view>
+	</view>
+</view>

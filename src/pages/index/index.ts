@@ -107,7 +107,7 @@ Page({
             icon: 'notepad',
             name: '长列表',
             label: 'Recycle',
-            path: '',
+            path: '../recycle/index',
           },
           {
             icon: 'pubuliu',

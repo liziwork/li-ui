@@ -1,0 +1,36 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+></wxs>
+
+<view
+	class="li-recycle content-class"
+	views="{{ views.length }}"
+	change:views="{{ wxs.init }}"
+>
+	<view class="placeholder">
+		<view
+			wx:for="{{ views.length }}"
+			wx:key="item"
+			id="placeholder-{{ index }}"
+			class="view"
+		/>
+	</view>
+	<block
+		wx:for="{{ views }}"
+		wx:key="item"
+	>
+		<view
+			wx:for="{{ block[index] }}"
+			wx:key="item"
+			wx:for-index="i"
+			wx:for-item="child"
+			class="block-{{ index }}"
+		>
+			<selectable
+				wx:if="{{ item.length }}"
+				value="{{ item[i] }}"
+			/>
+		</view>
+	</block>
+</view>

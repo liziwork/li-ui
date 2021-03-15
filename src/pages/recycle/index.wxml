@@ -1,11 +1,8 @@
 <view class="container">
-	<li-waterfall
-		generic:selectable="card"
+	<li-recycle
+		content-class="content"
+		generic:selectable="shop-card"
 		views="{{ views }}"
-		skeleton
-		length="8"
-		recycle
-		loaded-class="loaded-view"
 		bind:observe="observe"
 	/>
 	<li-load-more status="{{ loading }}" />

@@ -1,0 +1,42 @@
+var format = require('../utils/format.wxs')
+
+function init(newValue, oldValue, ownerInstance, instance) {
+  if (newValue === 0 || newValue === oldValue) return
+
+  var index = newValue - 1
+
+  var STATE = instance.getState()
+  if (!STATE.views) STATE.views = []
+
+  instance.setTimeout(function () {
+    var height = instance.getComputedStyle(['height']).height
+    height = format.fixUnit(height, 'px')
+
+    STATE.views[index] = height
+
+    var placeholder = ownerInstance.selectComponent('#placeholder-' + index)
+    var pervHeight = STATE.views[index - 1]
+    if (!pervHeight) pervHeight = 0
+    height = height - pervHeight
+
+    if (height === 0) return
+
+    placeholder.setStyle({
+      height: height + 'px',
+    })
+
+    var blocks = ownerInstance.selectAllComponents('.block-' + index)
+    blocks.forEach(function (v) {
+      var style = v.getComputedStyle(['width', 'height'])
+      v.setStyle(style)
+    })
+
+    ownerInstance.callMethod('generateObserves', {
+      index: index,
+    })
+  }, 500)
+}
+
+module.exports = {
+  init: init,
+}

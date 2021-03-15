@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "li-recycle": "../../li-ui/recycle/index",
+    "li-load-more": "../../li-ui/load-more/index",
+    "shop-card": "../../components/shop-card/index"
+  },
+  "navigationBarTitleText": "长列表"
+}

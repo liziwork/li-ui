@@ -1,32 +1,33 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/waterfall/index",
-    "pages/pull-down-refresh/index",
-    "pages/pull-down-refresh-demo/index",
-    "pages/divider/index",
-    "pages/icon/index",
-    "pages/icon-list/index",
-    "pages/image/index",
-    "pages/loading/index",
-    "pages/safe-area/index",
-    "pages/load-more/index",
-    "pages/navbar/index",
-    "pages/tabbar/index",
-    "pages/scroll-view/index"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "LIUI",
-    "navigationBarTextStyle": "black",
-    "backgroundColorTop": "#ffffff",
-    "backgroundColorBottom": "#ffffff",
-    "backgroundColor": "#ffffff"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "usingComponents": {
-    "li-safe-area": "./li-ui/safe-area/index"
-  }
+	"pages": [
+		"pages/index/index",
+		"pages/waterfall/index",
+		"pages/pull-down-refresh/index",
+		"pages/pull-down-refresh-demo/index",
+		"pages/divider/index",
+		"pages/icon/index",
+		"pages/icon-list/index",
+		"pages/image/index",
+		"pages/loading/index",
+		"pages/safe-area/index",
+		"pages/load-more/index",
+		"pages/navbar/index",
+		"pages/tabbar/index",
+		"pages/scroll-view/index",
+		"pages/recycle/index"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTitleText": "LIUI",
+		"navigationBarTextStyle": "black",
+		"backgroundColorTop": "#ffffff",
+		"backgroundColorBottom": "#ffffff",
+		"backgroundColor": "#ffffff"
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json",
+	"usingComponents": {
+		"li-safe-area": "./li-ui/safe-area/index"
+	}
 }

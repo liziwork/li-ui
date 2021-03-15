@@ -28,7 +28,7 @@
 			/>
 		</li-divider>
 	</block>
-	<block wx:if="{{ status === 'loaded' }}">
+	<block wx:if="{{ status === 'done' }}">
 		<slot
 			wx:if="{{ custom }}"
 			name="loaded"

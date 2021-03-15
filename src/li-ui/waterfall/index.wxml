@@ -9,7 +9,7 @@
 	class="li-waterfall-container"
 	views="{{ views.length }}"
 	change:views="{{ wxs.render }}"
-	data-options="{{ {span, length, timeOut, loadedClass} }}"
+	data-options="{{ {span, length, recycle, timeOut, loadedClass} }}"
 	style="--span: {{ span[1] / 2 + 'px' }}"
 >
 

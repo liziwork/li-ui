@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "li-load-more": "../../li-ui/load-more/index",
     "li-waterfall": "../../li-ui/waterfall/index",
     "card": "../../components/card/index"
   },

@@ -1,0 +1,118 @@
+@skeleton-bg: var(--skeleton-color);
+@main-color: var(--main-color);
+
+.text-hide {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.c-card {
+  --skeleton-color: #f2f2f2;
+  --main-color: tomato;
+
+  width: 100%;
+  background: white;
+  border-radius: 20rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+
+  &.row {
+    flex-flow: row;
+    .loaded-view {
+      width: 350rpx;
+    }
+    .content {
+      width: 30%;
+      flex-grow: 1;
+      height: 350rpx;
+      display: inline-flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+  }
+
+  .loaded-view {
+    width: 100%;
+    height: 350rpx;
+    background: @skeleton-bg;
+    transition: all 0.1s;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .title {
+    width: calc(100% - 40rpx);
+    padding: 30rpx 20rpx;
+    font-size: 26rpx;
+    color: #333;
+    line-height: 34rpx;
+    .text-hide;
+  }
+
+  .action {
+    display: flex;
+    border-bottom: 1rpx solid #efefef;
+    padding: 0 20rpx 30rpx 20rpx;
+
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 24rpx;
+      padding-right: 20rpx;
+
+      .number {
+        font-weight: bold;
+        padding-left: 5rpx;
+        color: #999;
+      }
+    }
+  }
+
+  .author {
+    width: calc(100% - 40rpx);
+    padding: 40rpx 20rpx;
+    display: inline-flex;
+
+    .avatar {
+      width: 70rpx;
+      height: 70rpx;
+      border-radius: 100%;
+      overflow: hidden;
+      background: @skeleton-bg;
+    }
+
+    .info {
+      width: 50%;
+      flex-grow: 1;
+      padding-left: 20rpx;
+      display: inline-flex;
+      flex-flow: column;
+    }
+
+    .nickname {
+      color: @main-color;
+      padding-right: 4rpx;
+      font-size: 28rpx;
+      .text-hide;
+    }
+
+    .name {
+      font-size: 24rpx;
+      color: #999;
+    }
+
+    .category {
+      font-size: 24rpx;
+      color: tomato;
+      .text-hide;
+    }
+  }
+}

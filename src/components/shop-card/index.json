@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "li-icon": "../../li-ui/icon/index",
+    "li-image": "../../li-ui/image/index"
+  }
+}

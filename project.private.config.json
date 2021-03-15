@@ -89,6 +89,12 @@
           "pathName": "pages/scroll-view/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "recycle",
+          "pathName": "pages/recycle/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

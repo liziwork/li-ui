@@ -3,7 +3,7 @@ let timer: any
 Page({
   data: {
     trigger: false,
-    items: 10,
+    items: 15,
     status: 'ready',
   },
   onTolower() {
@@ -15,7 +15,7 @@ Page({
         status = 'loaded'
       } else {
         status = ''
-        items += 10
+        items += 5
       }
       this.setData({ status, items })
     }, 2000)

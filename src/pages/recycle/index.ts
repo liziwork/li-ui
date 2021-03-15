@@ -6,6 +6,6 @@ Component({
   },
   behaviors: [getHuaBanList],
   data: {
-    _key: '综艺海报',
+    _key: '淘宝主图',
   },
 })
