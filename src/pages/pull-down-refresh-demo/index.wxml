@@ -9,9 +9,12 @@
 		bind:refresh="onRefresh"
 		bind:restore="onRestore"
 	>
-		<view class="content">
+		<view
+			slot="content-bar"
+			class="content"
+		>
 			<view
-				wx:for="{{ 8 }}"
+				wx:for="{{ 10 }}"
 				wx:key="item"
 				class="item"
 			>{{ index }}</view>
@@ -27,9 +30,12 @@
 		bind:refresh="onRefresh"
 		bind:restore="onRestore"
 	>
-		<view class="content">
+		<view
+			slot="content-bar"
+			class="content"
+		>
 			<view
-				wx:for="{{ 8 }}"
+				wx:for="{{ 10 }}"
 				wx:key="item"
 				class="item"
 			>{{ index }}</view>
@@ -45,9 +51,12 @@
 		bind:refresh="onRefresh"
 		bind:restore="onRestore"
 	>
-		<view class="content">
+		<view
+			slot="content-bar"
+			class="content"
+		>
 			<view
-				wx:for="{{ 8 }}"
+				wx:for="{{ 10 }}"
 				wx:key="item"
 				class="item"
 			>{{ index }}</view>
@@ -63,9 +72,12 @@
 		bind:refresh="onRefresh"
 		bind:restore="onRestore"
 	>
-		<view class="content">
+		<view
+			slot="content-bar"
+			class="content"
+		>
 			<view
-				wx:for="{{ 8 }}"
+				wx:for="{{ 10 }}"
 				wx:key="item"
 				class="item"
 			>{{ index }}</view>

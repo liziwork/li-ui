@@ -1,16 +1,24 @@
 .li-scroll-view {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-flow: column;
 
-  .refresh-view {
+  .scroll-view {
     width: 100%;
-    height: 100px;
-    position: absolute;
-    top: -100px;
-  }
+    height: 50%;
+    flex-grow: 1;
+    overflow-anchor: auto;
 
-  .content {
-    width: 100%;
-    height: 100%;
+    .refresh-view {
+      width: 100%;
+      height: 100px;
+      position: absolute;
+      top: -100px;
+    }
+
+    .scroll-content {
+      width: 100%;
+    }
   }
 }

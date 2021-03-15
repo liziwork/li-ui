@@ -29,9 +29,19 @@ function setContentStyle(system) {
   })
 }
 
+function onToupper(event, ownerInstance) {
+  ownerInstance.triggerEvent('toupper')
+}
+
+function onTolower(event, ownerInstance) {
+  ownerInstance.triggerEvent('tolower')
+}
+
 module.exports = {
   onPulling: onPulling,
   onRefresh: onRefresh,
   onRestore: onRestore,
   setContentStyle: setContentStyle,
+  onToupper: onToupper,
+  onTolower: onTolower,
 }

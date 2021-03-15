@@ -1,4 +1,16 @@
 <view class="li-load-more">
+	<block wx:if="{{ status === 'ready' }}">
+		<slot
+			wx:if="{{ custom }}"
+			name="ready"
+		/>
+		<li-divider
+			wx:else
+			color="{{ color }}"
+			text="到底啦~"
+			safeArea
+		/>
+	</block>
 	<block wx:if="{{ status === 'loading' }}">
 		<slot
 			wx:if="{{ custom }}"

@@ -101,7 +101,7 @@ Page({
             icon: 'mouse',
             name: '滚动视图',
             label: 'ScrollView',
-            path: '',
+            path: '../scroll-view/index',
           },
           {
             icon: 'notepad',

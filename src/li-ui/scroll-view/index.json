@@ -1,6 +1,8 @@
 {
   "component": true,
-  "usingComponents": {},
+  "usingComponents": {
+    "li-load-more": "../load-more/index"
+  },
   "componentGenerics": {
     "selectable": true
   }

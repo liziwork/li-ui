@@ -81,6 +81,13 @@
         {
           "name": "tabbar",
           "pathName": "pages/tabbar/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "scroll-view",
+          "pathName": "pages/scroll-view/index",
+          "query": "",
           "scene": null
         }
       ]

@@ -1,0 +1,28 @@
+<view class="container">
+	<li-scroll-view
+		generic:selectable="flying-superman"
+		refresh
+		refresh-style="flyingSuperman"
+		refresh-bg-color="#fff"
+		trigger="{{ trigger }}"
+		loadMoreStatus="{{ status }}"
+		bind:tolower="onTolower"
+		bind:refresh="onRefresh"
+		bind:restore="onRestore"
+	>
+		<li-navbar
+			slot="navbar"
+			title="滚动视图"
+		/>
+		<view
+			slot="content-bar"
+			class="content"
+		>
+			<view
+				wx:for="{{ items }}"
+				wx:key="item"
+				class="item"
+			>{{ item }}</view>
+		</view>
+	</li-scroll-view>
+</view>

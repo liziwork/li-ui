@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "li-scroll-view": "../../li-ui/scroll-view/index",
+    "li-navbar": "../../li-ui/navbar/index",
+    "flying-superman": "../../li-ui/animations/flying-superman/index"
+  },
+  "navigationStyle": "custom",
+  "disableScroll": true
+}

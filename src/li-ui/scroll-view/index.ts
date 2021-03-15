@@ -1,6 +1,7 @@
-import system from '../utils/system'
-
 Component({
+  options: {
+    multipleSlots: true,
+  },
   properties: {
     refresh: Boolean,
     refreshStyle: String,
@@ -13,8 +14,15 @@ Component({
       type: String,
       value: '#f9f9f9',
     },
-  },
-  data: {
-    system,
+    bgColor: String,
+    loadMoreStatus: String,
+    upperThreshold: {
+      type: Number,
+      value: 50,
+    },
+    lowerThreshold: {
+      type: Number,
+      value: 50,
+    },
   },
 })
