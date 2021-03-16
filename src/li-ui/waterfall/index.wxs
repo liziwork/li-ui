@@ -14,7 +14,6 @@ function render(newValue, oldValue, ownerInstance, instance) {
   STATE.views[pIndex] = {
     height: [],
     style: [],
-    init: [],
     loaded: [],
     timeOut: getDate().getTime() + OPTIONS.timeOut,
   }
@@ -54,29 +53,25 @@ function generateStyle(LH, RH, height) {
   }
 }
 
-function getLoadedViewStyle(instance, STATE) {
-  var loadedView = instance.selectComponent('.' + STATE.options.loadedClass)
-  var style = loadedView.getComputedStyle(['height'])
-  return style
-}
-
-function refreshView(ownerInstance, i, STATE, status) {
+function refreshView(ownerInstance, i, STATE, loadStatus) {
   var views = ownerInstance.selectAllComponents('.waterfall-item-' + i)
   if (!views) return
   var LH = STATE.heights[i][0]
   var RH = STATE.heights[i][1]
   views.forEach(function (v, k) {
+    if (loadStatus) {
+      var loadedView = v.selectComponent('.' + STATE.options.loadedClass)
+      loadedView.setStyle({
+        height: STATE.views[i].height[k] + 'px',
+      })
+    }
     var viewStyle = v.getComputedStyle(['height'])
     var view_height = format.fixUnit(viewStyle.height)
     var result = generateStyle(LH, RH, view_height + STATE.options.span[0])
     LH = result.LH
     RH = result.RH
     v.setStyle(result.style)
-    STATE.views[i].height[k] = view_height
-    if (!status) {
-      // load-view初始高度
-      STATE.views[i].init[k] = getLoadedViewStyle(v, STATE)
-    } else {
+    if (loadStatus) {
       STATE.views[i].style[k] = result.style
     }
   })
@@ -105,8 +100,8 @@ function loaded(newValue, oldValue, ownerInstance, instance) {
 
   // 是否二次加载
   if (loadedStyle[index]) {
-    LOADED.setStyle(loadedStyle[index])
     instance.setStyle(viewStyle[index])
+    LOADED.setStyle(loadedStyle[index])
     // console.log('二次加载')
     return
   }
@@ -124,14 +119,12 @@ function loaded(newValue, oldValue, ownerInstance, instance) {
     format.fixUnit(loaded.width),
     format.fixUnit(loaded.height)
   )
-  var style = { height: height + 'px' }
-  LOADED.setStyle(style)
-  STATE.views[pIndex].loaded[index] = style
+  STATE.views[pIndex].height[index] = height
+  // var style = { height: height + 'px' }
+  STATE.views[pIndex].loaded[index] = { height: height + 'px' }
 
   // 判断当前的高度是否跟之前的一致
-  var STYLE = instance.getComputedStyle(['height'])
-  var viewHeight = STATE.views[pIndex].height[index]
-  if (format.fixUnit(STYLE.height) === viewHeight) {
+  if (format.fixUnit(STYLE.height) === height) {
     // console.log('样式一致')
     return
   }
