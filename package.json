@@ -1,6 +1,6 @@
 {
   "name": "@liziwork/li-ui",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "小程序UI组件库",
   "miniprogram": "./dist",
   "directories": {
