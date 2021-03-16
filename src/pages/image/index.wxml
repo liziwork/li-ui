@@ -23,7 +23,6 @@
 				width="200rpx"
 				height="200rpx"
 				src="{{ imageSrc }}"
-				round
 				radius="20rpx"
 			/>
 		</view>
