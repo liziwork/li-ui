@@ -1,0 +1,46 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+></wxs>
+
+<view
+	class="li-image {{ round ? 'round' : '' }}"
+	style="{{ wxs.setStyle({width, height, bgColor, radius}) }}"
+>
+	<image
+		class="image"
+		src="{{ src }}"
+		mode="{{ mode }}"
+		data-mode="{{ mode }}"
+		bind:load="{{ wxs.loaded }}"
+		bind:error="onError"
+	/>
+	<view
+		wx:if="{{ status === 'loading' }}"
+		class="loading"
+	>
+		<slot
+			wx:if="{{ loadingSlot }}"
+			name="loading"
+		/>
+		<li-icon
+			wx:else
+			name="album"
+			color="#dcdede"
+		/>
+	</view>
+	<view
+		wx:if="{{ status === 'error' }}"
+		class="error"
+	>
+		<slot
+			wx:if="{{ errorSlot }}"
+			name="error"
+		/>
+		<li-icon
+			wx:else
+			name="load-error"
+			color="#dcdede"
+		/>
+	</view>
+</view>

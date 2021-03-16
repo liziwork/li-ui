@@ -1,0 +1,19 @@
+module.exports = {
+  init: function (newValue, oldValue, ownerInstance, instance) {
+    var system = newValue.system
+    if (newValue.area === 'top') {
+      instance.setStyle({
+        height:
+          'calc(' + system.statusBarHeight + 'px - ' + newValue.height + ')',
+        background: newValue.color,
+      })
+    }
+    if (newValue.area === 'bottom') {
+      instance.setStyle({
+        height:
+          'calc(' + system.safeAreaBottom + 'px - ' + newValue.height + ')',
+        background: newValue.color,
+      })
+    }
+  },
+}

@@ -1,0 +1,20 @@
+var format = require('../utils/format.wxs')
+
+module.exports = {
+  init: function (system, oldValue, ownerInstance, instance) {
+    instance.setStyle({
+      height: system.navBarHeight + 'px',
+      padding: format.formatArrayStyle(system.navBarPadding),
+    })
+
+    var operate = ownerInstance.selectComponent('.operate')
+    operate.setStyle({
+      width: system.width + 'px',
+    })
+
+    var title = ownerInstance.selectComponent('.title')
+    title.setStyle({
+      width: system.navBarWidth + 'px',
+    })
+  },
+}

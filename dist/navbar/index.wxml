@@ -1,0 +1,46 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+/>
+
+<view
+	class="li-navbar"
+	style="background: {{ bgColor }}"
+>
+	<li-safe-area area="top" />
+	<view
+		class="content"
+		system="{{ system }}"
+		change:system="{{ wxs.init }}"
+	>
+		<view class="operate">
+			<slot
+				wx:if="{{ iconSlot }}"
+				name="icon"
+			/>
+			<view
+				class="icon"
+				bind:tap="back"
+				wx:else
+			>
+				<li-icon
+					name="{{ icon ? icon : pageLength === 1 ? 'home' : 'chevron-left' }}"
+					size="40rpx"
+					color="{{ color }}"
+				/>
+			</view>
+		</view>
+		<view
+			class="title"
+			style="color: {{ color }}"
+			bind:tap="title"
+		>
+			<slot
+				wx:if="{{ titleSlot }}"
+				name="title"
+			/>
+			<block wx:else>{{ title }}</block>
+		</view>
+	</view>
+	<slot name="other" />
+</view>

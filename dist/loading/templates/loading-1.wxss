@@ -1,0 +1,1 @@
+.loading-1{width:100%;width:100rpx}.loading-1 .square{width:18rpx;height:18rpx;border-radius:4rpx;background-color:var(--color);animation:loadingG 1.5s cubic-bezier(.17, .37, .43, .67) infinite}@keyframes loadingG{0%{transform:translate(0, 0) rotate(0deg)}50%{transform:translate(80rpx, 0) rotate(360deg)}100%{transform:translate(0, 0) rotate(0deg)}}

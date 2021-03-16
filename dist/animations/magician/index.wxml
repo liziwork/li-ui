@@ -1,0 +1,30 @@
+<view class="li-magician {{ moving ? 'moving' : '' }}">
+	<view class="magician">
+		<view class="objects">
+			<view class="square"></view>
+			<view class="circle"></view>
+			<view class="triangle"></view>
+		</view>
+		<view class="wizard">
+			<view class="body"></view>
+			<view class="right-arm">
+				<view class="right-hand"></view>
+			</view>
+			<view class="left-arm">
+				<view class="left-hand"></view>
+			</view>
+			<view class="head">
+				<view class="beard"></view>
+				<view class="face">
+					<view class="adds"></view>
+				</view>
+				<view class="hat">
+					<view class="hat-of-the-hat"></view>
+					<view class="four-point-star first"></view>
+					<view class="four-point-star second"></view>
+					<view class="four-point-star third"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

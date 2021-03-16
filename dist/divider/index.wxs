@@ -1,0 +1,14 @@
+module.exports = {
+  setStyle: function (data, old, ownerInstance, divider) {
+    if (data.text || data.custom) {
+      divider.addClass('show-text')
+    }
+    divider.addClass(data.position)
+    divider.setStyle({
+      '--border-style': data.dashed ? 'dashed' : 'solid',
+      '--color': data.color,
+      '--border-color': data.borderColor,
+      '--font-size': data.fontSize,
+    })
+  },
+}

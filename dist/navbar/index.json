@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "li-safe-area": "../safe-area/index",
+    "li-icon": "../icon/index"
+  }
+}

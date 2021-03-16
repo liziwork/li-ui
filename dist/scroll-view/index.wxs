@@ -1,0 +1,47 @@
+var getDataset = require('../utils/get-dataset.wxs')
+var format = require('../utils/format.wxs')
+
+var wxs = {
+  dog: require('../animations/dog/index.wxs'),
+  flyingSuperman: require('../animations/flying-superman/index.wxs'),
+  hotBalloon: require('../animations/hot-balloon/index.wxs'),
+  magician: require('../animations/magician/index.wxs'),
+}
+
+function onPulling(event, ownerInstance) {
+  var style = getDataset.get(event, 'refreshStyle')
+  wxs[style].onPulling(event, ownerInstance)
+}
+
+function onRefresh(event, ownerInstance) {
+  var style = getDataset.get(event, 'refreshStyle')
+  wxs[style].onRefresh(event, ownerInstance)
+}
+
+function onRestore(event, ownerInstance) {
+  var style = getDataset.get(event, 'refreshStyle')
+  wxs[style].onRestore(event, ownerInstance)
+}
+
+function setContentStyle(system) {
+  return format.formatStyle({
+    paddingBottom: system.safeAreaBottom + 'px',
+  })
+}
+
+function onToupper(event, ownerInstance) {
+  ownerInstance.triggerEvent('toupper')
+}
+
+function onTolower(event, ownerInstance) {
+  ownerInstance.triggerEvent('tolower')
+}
+
+module.exports = {
+  onPulling: onPulling,
+  onRefresh: onRefresh,
+  onRestore: onRestore,
+  setContentStyle: setContentStyle,
+  onToupper: onToupper,
+  onTolower: onTolower,
+}

@@ -1,0 +1,159 @@
+var format = require('../utils/format.wxs')
+
+function render(newValue, oldValue, ownerInstance, instance) {
+  if (newValue === 0 || newValue === oldValue) return
+
+  var OPTIONS = instance.getDataset().options
+  var pIndex = newValue - 1
+  var STATE = ownerInstance.getState()
+
+  STATE.options = OPTIONS
+  STATE.page = newValue
+
+  if (!STATE.views) STATE.views = []
+  STATE.views[pIndex] = {
+    height: [],
+    style: [],
+    loaded: [],
+    timeOut: getDate().getTime() + OPTIONS.timeOut,
+  }
+
+  if (!STATE.heights) STATE.heights = [[0, 0]]
+
+  refreshView(ownerInstance, pIndex, STATE, false)
+
+  // 是否开启长列表
+  if (!OPTIONS.recycle) return
+  ownerInstance.callMethod('generateObserves', {
+    index: pIndex,
+  })
+}
+
+function generateStyle(LH, RH, height) {
+  var style = {}
+  if (LH <= RH) {
+    style = {
+      left: 0,
+      top: LH + 'px',
+      opacity: 1,
+    }
+    LH += height
+  } else if (LH > RH) {
+    style = {
+      right: 0,
+      top: RH + 'px',
+      opacity: 1,
+    }
+    RH += height
+  }
+  return {
+    LH: LH,
+    RH: RH,
+    style: style,
+  }
+}
+
+function refreshView(ownerInstance, i, STATE, loadStatus) {
+  var views = ownerInstance.selectAllComponents('.waterfall-item-' + i)
+  if (!views) return
+  var LH = STATE.heights[i][0]
+  var RH = STATE.heights[i][1]
+  views.forEach(function (v, k) {
+    if (loadStatus) {
+      var loadedView = v.selectComponent('.' + STATE.options.loadedClass)
+      loadedView.setStyle({
+        height: STATE.views[i].height[k] + 'px',
+      })
+    }
+    var viewStyle = v.getComputedStyle(['height'])
+    var view_height = format.fixUnit(viewStyle.height)
+    var result = generateStyle(LH, RH, view_height + STATE.options.span[0])
+    LH = result.LH
+    RH = result.RH
+    v.setStyle(result.style)
+    if (loadStatus) {
+      STATE.views[i].style[k] = result.style
+    }
+  })
+  STATE.heights[i + 1] = [LH, RH]
+
+  var container = ownerInstance.selectComponent('.li-waterfall')
+  container.setStyle({
+    height: Math.max(LH, RH) + 'px',
+  })
+
+  setPlaceholder(ownerInstance, i, LH, RH, STATE.heights[i])
+}
+
+var timer = null
+function loaded(newValue, oldValue, ownerInstance, instance) {
+  var loaded = newValue.item.loaded
+  if (!loaded) return
+
+  var STATE = ownerInstance.getState()
+  var pIndex = newValue.pIndex
+  var index = newValue.index
+
+  var viewStyle = STATE.views[pIndex].style
+  var loadedStyle = STATE.views[pIndex].loaded
+  var LOADED = instance.selectComponent('.' + STATE.options.loadedClass)
+
+  // 是否二次加载
+  if (loadedStyle[index]) {
+    instance.setStyle(viewStyle[index])
+    LOADED.setStyle(loadedStyle[index])
+    // console.log('二次加载')
+    return
+  }
+
+  // 超时不改变样式
+  var timeOut = STATE.views[pIndex].timeOut
+  if (timeOut < getDate().getTime()) {
+    // console.log('加载超时')
+    return
+  }
+
+  var STYLE = LOADED.getComputedStyle(['width', 'height'])
+  var height = computedHeight(
+    format.fixUnit(STYLE.width),
+    format.fixUnit(loaded.width),
+    format.fixUnit(loaded.height)
+  )
+  STATE.views[pIndex].height[index] = height
+  // var style = { height: height + 'px' }
+  STATE.views[pIndex].loaded[index] = { height: height + 'px' }
+
+  // 判断当前的高度是否跟之前的一致
+  if (format.fixUnit(STYLE.height) === height) {
+    // console.log('样式一致')
+    return
+  }
+
+  // 触发图片加载完毕事件
+  ownerInstance.clearTimeout(timer)
+  timer = ownerInstance.setTimeout(function () {
+    // console.log('触发loaded')
+    for (var i = pIndex; i < STATE.page; i++) {
+      refreshView(ownerInstance, i, STATE, true)
+    }
+  }, 300)
+}
+
+function computedHeight(viewWidth, width, height) {
+  return (viewWidth / width) * height
+}
+
+function setPlaceholder(dom, index, LH, RH, heights) {
+  var placeholder = dom.selectComponent('#placeholder-' + index)
+  var height = Math.max(LH, RH)
+  var top = Math.min(heights[0], heights[1])
+  placeholder.setStyle({
+    height: height - top + 'px',
+    top: top + 'px',
+  })
+}
+
+module.exports = {
+  render: render,
+  loaded: loaded,
+}

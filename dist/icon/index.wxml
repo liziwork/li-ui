@@ -1,0 +1,30 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+></wxs>
+
+<view
+	class="li-icon"
+	options="{{ {size, color, dotBg} }}"
+	change:options="{{ wxs.init }}"
+>
+	<image
+		wx:if="{{ src }}"
+		src="{{ src }}"
+		style="width: {{ size }}; height: {{ size }};"
+	/>
+	<view
+		wx:else
+		class="iconfont {{ name }}"
+	/>
+	<view
+		wx:if="{{ dot }}"
+		class="dot"
+		style="background: {{ dotBg }}"
+	/>
+	<view
+		wx:if="{{ info }}"
+		class="dot-info"
+		style="background: {{ dotBg }}"
+	>{{ info }}</view>
+</view>

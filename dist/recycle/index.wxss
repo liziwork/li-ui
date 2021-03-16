@@ -1,0 +1,1 @@
+.li-recycle{position:relative}.li-recycle .placeholder{position:absolute;z-index:-1;width:1px;padding:inherit}.li-recycle .placeholder .view{width:100%}

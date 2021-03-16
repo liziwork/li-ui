@@ -1,0 +1,11 @@
+<view class="li-hot-balloon {{ moving ? 'moving' : '' }}">
+	<view class="hot-balloon">
+		<view class="ball-box">
+			<view class="balloon" />
+			<view class="basket" />
+		</view>
+		<view class="cloud-box">
+			<view class="cloud" />
+		</view>
+	</view>
+</view>

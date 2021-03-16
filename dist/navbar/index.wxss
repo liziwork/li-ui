@@ -1,0 +1,1 @@
+.li-navbar .content{display:flex;align-items:center}.li-navbar .content .icon{width:40%;padding:0 5px}.li-navbar .content .title{text-align:center;font-size:30rpx}

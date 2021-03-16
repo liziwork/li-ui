@@ -1,0 +1,18 @@
+<template name="loading-12">
+	<view class="loading-12">
+		<view
+			wx:for="{{ 8 }}"
+			wx:key="item"
+			class="block"
+		></view>
+	</view>
+</template>
+<template name="loading-13">
+	<view class="loading-13">
+		<view
+			wx:for="{{ 8 }}"
+			wx:key="item"
+			class="block"
+		></view>
+	</view>
+</template>

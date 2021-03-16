@@ -1,0 +1,12 @@
+module.exports = {
+  init: function (options, oldValue, ownerInstance, instance) {
+    var style = {}
+    if (options.color) {
+      style['--color'] = options.color
+    }
+    if (options.size) {
+      style['--size'] = options.size
+    }
+    instance.setStyle(style)
+  },
+}

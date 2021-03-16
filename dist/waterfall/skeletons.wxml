@@ -1,0 +1,31 @@
+<wxs module="wxs">
+	module.exports = {
+		showDelay: function (index) {
+			if (index > 5) return
+			return 'animation-delay: ' + Number(0.5 + index * 0.2) + 's'
+		}
+	}
+</wxs>
+
+<template name="skeleton">
+	<view class="skeletons">
+		<block
+			wx:for="{{ length }}"
+			wx:key="item"
+		>
+			<view
+				class="skeleton"
+				style="{{ wxs.showDelay(index) }}"
+			>
+				<view class="skeleton-image"></view>
+				<view class="skeleton-text">
+					<view
+						wx:for="{{ 3 }}"
+						wx:key="line"
+						class="text-line"
+					></view>
+				</view>
+			</view>
+		</block>
+	</view>
+</template>

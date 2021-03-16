@@ -1,0 +1,42 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+/>
+<view class="li-scroll-view">
+	<slot name="navbar" />
+	<scroll-view
+		class="scroll-view"
+		style="background: {{ bgColor }}"
+		scroll-y
+		enable-back-to-top
+		upper-threshold="{{ upperThreshold }}"
+		lower-threshold="{{ lowerThreshold }}"
+		enhanced
+		scroll-anchoring
+		enable-flex
+		refresher-enabled="{{ refresh }}"
+		refresher-threshold="{{ threshold }}"
+		refresher-default-style="none"
+		refresher-triggered="{{ trigger }}"
+		refresher-background="{{ refreshBgColor }}"
+		data-threshold="{{ threshold }}"
+		data-refresh-style="{{ refreshStyle }}"
+		bind:refresherpulling="{{ wxs.onPulling }}"
+		bind:refresherrefresh="{{ wxs.onRefresh }}"
+		bind:refresherrestore="{{ wxs.onRestore }}"
+		bind:scrolltoupper="{{ wxs.onToupper }}"
+		bind:scrolltolower="{{ wxs.onTolower }}"
+	>
+		<view
+			wx:if="{{ refresh }}"
+			class="refresh-view"
+			style="height: {{ threshold }}px; top: -{{ threshold }}px"
+		>
+			<selectable />
+		</view>
+		<view class="scroll-content">
+			<slot name="content-bar" />
+			<li-load-more status="{{ loadMoreStatus }}" />
+		</view>
+	</scroll-view>
+</view>

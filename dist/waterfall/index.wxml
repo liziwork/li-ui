@@ -1,0 +1,50 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+/>
+<import src="./placeholder.wxml" />
+<import src="./skeletons.wxml" />
+
+<view
+	class="li-waterfall"
+	views="{{ views.length }}"
+	change:views="{{ wxs.render }}"
+	data-options="{{ {span, length, recycle, timeOut, loadedClass} }}"
+	style="--span: {{ span[1] / 2 + 'px' }}"
+>
+
+	<block wx:if="{{ views.length }}">
+		<template
+			is="placeholder"
+			data="{{ views }}"
+		/>
+
+		<block
+			wx:for="{{ views }}"
+			wx:key="item"
+			wx:for-index="pIndex"
+		>
+			<selectable
+				wx:for="{{ item }}"
+				wx:key="item"
+				class="item waterfall-item-{{ pIndex }}"
+				value="{{ {index, pIndex, item} }}"
+				change:value="{{ wxs.loaded }}"
+				bind:loaded="loaded"
+			/>
+		</block>
+	</block>
+
+	<block wx:elif="{{ skeleton }}">
+		<slot
+			wx:if="{{ skeletonSlot }}"
+			name="skeleton"
+		/>
+		<template
+			wx:else
+			is="skeleton"
+			data="{{ length }}"
+		/>
+	</block>
+
+</view>
