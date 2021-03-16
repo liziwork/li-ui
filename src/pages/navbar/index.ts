@@ -11,4 +11,5 @@ Page({
       icon: 'none',
     })
   },
+  onShareAppMessage() {},
 })

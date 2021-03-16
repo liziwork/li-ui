@@ -21,8 +21,6 @@
     "noImplicitThis": true,
     "lib": ["es2015"],
     "typeRoots": ["./node_modules/miniprogram-api-typings/types"]
-    // "rootDir": "./src",
-    // "outDir": "./dist",
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules"]

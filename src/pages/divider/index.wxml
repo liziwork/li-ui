@@ -50,3 +50,4 @@
 		</li-divider>
 	</panel>
 </viwe>
+<li-safe-area />

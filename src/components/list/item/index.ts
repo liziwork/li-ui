@@ -9,7 +9,7 @@ Component({
     click() {
       if (!this.data.path) {
         wx.showToast({
-          title: '开发中',
+          title: '敬请期待',
           icon: 'none',
         })
         return

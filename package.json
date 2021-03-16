@@ -1,8 +1,8 @@
 {
-  "name": "li-ui",
+  "name": "@liziwork/li-ui",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "description": "小程序UI组件库",
+  "miniprogram": "./dist",
   "directories": {
     "example": "example"
   },
@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/liziwork/li-ui.git"
   },
-  "keywords": [],
+  "keywords": [
+    "小程序UI组件库",
+    "LIUI",
+    "微信小程序",
+    "小程序自定义组件"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -22,10 +27,6 @@
   "homepage": "https://github.com/liziwork/li-ui#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-less": "^4.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-typescript": "^6.0.0-alpha.1",
     "miniprogram-api-typings": "^3.3.0"
   }
 }

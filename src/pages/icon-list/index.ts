@@ -211,4 +211,5 @@ Page({
     const icons = _icons.filter((v: string) => v.search(name) !== -1) as []
     this.setData({ icons })
   },
+  onShareAppMessage() {},
 })

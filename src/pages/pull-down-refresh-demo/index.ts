@@ -32,4 +32,5 @@ Page({
     wx.hideLoading()
     clearTimeout(timer)
   },
+  onShareAppMessage() {},
 })

@@ -17,4 +17,5 @@ Page({
       this.setData({ status, items })
     }, 2000)
   },
+  onShareAppMessage() {},
 })

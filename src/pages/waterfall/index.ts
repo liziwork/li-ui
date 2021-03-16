@@ -8,4 +8,7 @@ Component({
   data: {
     _key: '综艺海报',
   },
+  methods: {
+    onShareAppMessage() {},
+  },
 })

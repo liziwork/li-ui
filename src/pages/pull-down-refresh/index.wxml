@@ -25,3 +25,4 @@
 		bg-color="#f9f9f9"
 	/>
 </view>
+<li-safe-area />

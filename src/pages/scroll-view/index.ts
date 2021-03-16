@@ -26,12 +26,13 @@ Page({
         title: '刷新成功',
         icon: 'none',
       })
-      this.setData({ trigger: false, items: 10, status: 'ready' })
+      this.setData({ trigger: false, items: 15, status: 'ready' })
     }, 1000)
   },
   onRestore() {
     clearTimeout(timer)
   },
+  onShareAppMessage() {},
 })
 
 export {}

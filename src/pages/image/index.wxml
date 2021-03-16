@@ -98,3 +98,4 @@
 		</view>
 	</panel>
 </view>
+<li-safe-area />

@@ -131,3 +131,4 @@
 		<text>所有图标</text>
 	</button>
 </view>
+<li-safe-area />

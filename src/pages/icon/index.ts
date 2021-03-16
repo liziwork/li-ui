@@ -4,4 +4,5 @@ Page({
       url: '../icon-list/index',
     })
   },
+  onShareAppMessage() {},
 })

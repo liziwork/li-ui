@@ -8,4 +8,7 @@ Component({
   data: {
     _key: '淘宝主图',
   },
+  methods: {
+    onShareAppMessage() {},
+  },
 })
