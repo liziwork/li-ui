@@ -5,20 +5,17 @@ Component({
   properties: {
     width: {
       type: String,
-      value: '200rpx',
+      value: '100%',
     },
     height: {
       type: String,
-      value: '200rpx',
+      value: '100%',
     },
     mode: {
       type: String,
       value: 'none',
     },
-    bgColor: {
-      type: String,
-      value: '#f7f7f7',
-    },
+    bgColor: String,
     src: String,
     round: Boolean,
     radius: String,

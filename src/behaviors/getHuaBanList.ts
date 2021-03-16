@@ -4,7 +4,7 @@ export default Behavior({
   data: {
     views: [] as number[][],
     _page: 0,
-    loading: '',
+    loading: 'ready',
   },
   attached() {
     this.getHuaBanList()
@@ -16,7 +16,7 @@ export default Behavior({
       this.setData({ loading: 'loading' })
       setTimeout(async () => {
         await this.getHuaBanList()
-        loading = ''
+        loading = 'ready'
         if (_page >= 10) loading = 'done'
         this.setData({ loading })
       }, 1000)

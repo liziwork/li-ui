@@ -1,0 +1,9 @@
+<view class="container">
+	<li-waterfall
+		generic:selectable="image-load"
+		views="{{ views }}"
+		loaded-class="loaded-view"
+		bind:observe="observe"
+	/>
+	<button bind:tap="more">load</button>
+</view>

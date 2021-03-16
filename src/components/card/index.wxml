@@ -1,20 +1,16 @@
 <view class="c-card">
 	<view class="loaded-view">
-		<image
-			class="image"
+		<li-image
 			src="{{ value.item.image }}"
-			bind:load="load"
+			bind:loaded="load"
 		>
-		</image>
+		</li-image>
 	</view>
 	<view class="title">{{ value.item.title }}</view>
 	<view class="author">
 		<view class="avatar">
-			<image
-				class="image"
-				src="https://hbimg.huabanimg.com/{{ value.item.author.avatar }}_sq75sf/format/webp"
-			>
-			</image>
+			<li-image src="https://hbimg.huabanimg.com/{{ value.item.author.avatar }}_sq75sf/format/webp">
+			</li-image>
 		</view>
 		<view class="info">
 			<view class="nickname">

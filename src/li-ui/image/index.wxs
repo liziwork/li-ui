@@ -1,0 +1,35 @@
+var getDataset = require('../utils/get-dataset.wxs')
+var format = require('../utils/format.wxs')
+
+module.exports = {
+  setStyle: function (style) {
+    var styles = ''
+    if (style.radius) {
+      styles += '--radius:' + style.radius + ';'
+    }
+    if (style.width) {
+      styles += '--width:' + style.width + ';'
+    }
+    if (style.height) {
+      styles += '--height:' + style.height + ';'
+    }
+    if (style.radius) {
+      styles += '--bgColor:' + style.bgColor + ';'
+    }
+    return styles
+  },
+  loaded: function (event, ownerInstance) {
+    var mode = getDataset.get(event, 'mode')
+    if (mode === 'widthFix') {
+      var style = event.instance.getComputedStyle(['width'])
+
+      var imageView = ownerInstance.selectComponent('.li-image')
+
+      var height =
+        (format.fixUnit(style.width) / event.detail.width) * event.detail.height
+
+      imageView.setStyle({ '--height': height + 'px' })
+    }
+    ownerInstance.callMethod('onLoaded', event)
+  },
+}

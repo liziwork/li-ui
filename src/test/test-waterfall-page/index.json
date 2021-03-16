@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "li-waterfall": "../../li-ui/waterfall/index",
+    "image-load": "../test-image-load-cmp/index"
+  }
+}

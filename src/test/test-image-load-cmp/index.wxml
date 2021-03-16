@@ -1,0 +1,9 @@
+<view class="image-load">
+	<view class="loaded-view">
+		<li-image
+			src="{{ value.item.image }}"
+			bind:loaded="loaded"
+		/>
+	</view>
+	<view class="title">测试标题</view>
+</view>

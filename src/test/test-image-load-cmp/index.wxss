@@ -1,0 +1,14 @@
+.image-load {
+  width: 100%;
+  background: aliceblue;
+}
+
+.loaded-view {
+  height: 400rpx;
+  padding: 10rpx;
+}
+
+.title {
+  font: 28rpx;
+  padding: 20rpx;
+}

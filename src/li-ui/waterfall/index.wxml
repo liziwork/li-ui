@@ -6,7 +6,7 @@
 <import src="./skeletons.wxml" />
 
 <view
-	class="li-waterfall-container"
+	class="li-waterfall"
 	views="{{ views.length }}"
 	change:views="{{ wxs.render }}"
 	data-options="{{ {span, length, recycle, timeOut, loadedClass} }}"

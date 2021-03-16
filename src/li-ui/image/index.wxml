@@ -1,12 +1,18 @@
+<wxs
+	src="./index.wxs"
+	module="wxs"
+></wxs>
+
 <view
 	class="li-image {{ round ? 'round' : '' }}"
-	style="border-radius: {{ radius }}; width: {{ width }}; height: {{ height }}; background: {{ bgColor }}"
+	style="{{ wxs.setStyle({width, height, bgColor, radius}) }}"
 >
 	<image
 		class="image"
 		src="{{ src }}"
 		mode="{{ mode }}"
-		bind:load="onLoaded"
+		data-mode="{{ mode }}"
+		bind:load="{{ wxs.loaded }}"
 		bind:error="onError"
 	/>
 	<view

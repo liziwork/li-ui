@@ -95,6 +95,11 @@
           "pathName": "pages/recycle/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "test/test-waterfall-page/index",
+          "pathName": "test/test-waterfall-page/index",
+          "scene": null
         }
       ]
     }

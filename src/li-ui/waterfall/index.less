@@ -1,6 +1,6 @@
 @skeleton-bg: var(--skeleton-color);
 
-.li-waterfall-container {
+.li-waterfall {
   --skeleton-color: #f2f2f2;
   --show-delay: 1s;
 
@@ -11,18 +11,12 @@
   .placeholder {
     width: 100%;
     position: absolute;
-    // display: flex;
-    // justify-content: space-between;
-
-    // .left,
-    // .right {
-    //   width: calc(50% - var(--span));
-    // }
   }
 
   .item {
     position: absolute;
     width: calc(50% - var(--span));
+    opacity: 0;
     transition: all 0.1s;
   }
 

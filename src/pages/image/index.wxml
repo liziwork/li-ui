@@ -3,6 +3,8 @@
 		<view class="content">
 			<li-image
 				class="item"
+				width="200rpx"
+				height="200rpx"
 				src="{{ imageSrc }}"
 			/>
 		</view>
@@ -11,11 +13,15 @@
 		<view class="content">
 			<li-image
 				class="item"
+				width="200rpx"
+				height="200rpx"
 				src="{{ imageSrc }}"
 				round
 			/>
 			<li-image
 				class="item"
+				width="200rpx"
+				height="200rpx"
 				src="{{ imageSrc }}"
 				round
 				radius="20rpx"
@@ -31,6 +37,8 @@
 			>
 				<li-image
 					mode="{{ item }}"
+					width="200rpx"
+					height="{{ item === 'widthFix' ? 'auto' : '200rpx' }}"
 					src="{{ imageSrc }}"
 				/>
 				<text class="name">{{ item }}</text>
@@ -40,11 +48,18 @@
 	<panel title="加载提示">
 		<view class="content">
 			<view class="item">
-				<li-image />
+				<li-image
+					width="200rpx"
+					height="200rpx"
+				/>
 				<text class="name">默认提示</text>
 			</view>
 			<view class="item">
-				<li-image loading-slot>
+				<li-image
+					width="200rpx"
+					height="200rpx"
+					loading-slot
+				>
 					<li-loading
 						slot="loading"
 						key="20"
@@ -59,11 +74,17 @@
 	<panel title="失败提示">
 		<view class="content">
 			<view class="item">
-				<li-image src="0" />
+				<li-image
+					width="200rpx"
+					height="200rpx"
+					src="0"
+				/>
 				<text class="name">默认提示</text>
 			</view>
 			<view class="item">
 				<li-image
+					width="200rpx"
+					height="200rpx"
 					error-slot
 					src="1"
 				>

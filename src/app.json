@@ -14,7 +14,8 @@
 		"pages/navbar/index",
 		"pages/tabbar/index",
 		"pages/scroll-view/index",
-		"pages/recycle/index"
+		"pages/recycle/index",
+		"test/test-waterfall-page/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
