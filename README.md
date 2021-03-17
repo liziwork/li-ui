@@ -1,3 +1,6 @@
+# 扫码体验
+![小程序码](https://ae01.alicdn.com/kf/U5f40a0b1a2b049a392029ccb9f684308q.jpg)
+
 # 安装
 
 ## 通过 `npm` 安装
