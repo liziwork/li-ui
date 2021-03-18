@@ -1,6 +1,11 @@
 # 扫码体验
 ![小程序码](https://ae01.alicdn.com/kf/U5f40a0b1a2b049a392029ccb9f684308q.jpg)
 
+# 使用文档
+
+### [文档](https://liziwork.github.io/li-ui)
+### [备用文档](https://liziwork.gitee.io/li-ui)
+
 # 安装
 
 ## 通过 `npm` 安装
@@ -70,5 +75,3 @@ yarn add @liziwork/li-ui
 - 侧边导航栏
 - 选项卡
 - 菜单栏
-
-
