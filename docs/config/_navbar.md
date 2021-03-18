@@ -1,2 +1,1 @@
-* [En](/)
-* [中文](/zh-cn/)
+* [备用文档](https://liziwork.gitee.io/li-ui)
