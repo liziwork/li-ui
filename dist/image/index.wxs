@@ -13,7 +13,7 @@ module.exports = {
     if (style.height) {
       styles += '--height:' + style.height + ';'
     }
-    if (style.radius) {
+    if (style.bgColor) {
       styles += '--bgColor:' + style.bgColor + ';'
     }
     return styles
